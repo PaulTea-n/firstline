@@ -1,0 +1,287 @@
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('../fonts/arialnarrow.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('../fonts/TTNormsPro-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Panama Demo';
+    src: url('../fonts/Panama\ Demo\ Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RealMadrid2009';
+    src: url('../fonts/RealMadrid2009.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* =========header========= */
+.header-container {
+    display: flex;
+    padding: 24px;
+    font-family: 'Arial Narrow';
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #F8F6F2;
+    border-bottom: 1px solid #000000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'RealMadrid2009';
+}
+
+.nav-left {
+    display: flex;
+    gap: 85px;
+    align-items: flex-end;
+}
+
+.nav-centr {
+    display: flex;
+    gap: 85px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 85px;
+}
+
+/* ==========main============= */
+.main {
+    max-width: 1514px;
+    margin: 0 auto;
+}
+
+.block-img {
+    display: flex;
+}
+
+.card-model {
+    display: flex;
+    justify-content: space-around;
+    /* background-image: url("../img/main/img-card-1.png"); */
+    width: 504px;
+    height: 745px;
+}
+
+/* ----models card img */
+.card-one {
+    background-image: url("../img/main/img-card-1.png");
+}
+
+.card-two {
+    background-image: url("../img/main/img-card-2.png");
+}
+
+.card-three {
+    background-image: url("../img/main/img-card-3.png");
+    border-right: 1px solid #000000;
+}
+
+.card-four {
+    background-image: url("../img/main/img-card-4.png");
+}
+
+.card-five {
+    background-image: url("../img/main/img-card-2.png");
+}
+
+.card-six {
+    background-image: url("../img/main/img-card-6.png");
+}
+
+/* ------------------- */
+.models-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 16px;
+}
+
+.models-info_block {
+    display: flex;
+    align-items: center;
+}
+
+.models-params {
+    display: flex;
+    align-items: center;
+    font-family: 'TT Norms Pro';
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.models-parameters {
+    display: flex;
+    padding: 0px 20px 0px 25px;
+}
+
+.models-name {
+    font-family: 'Panama Demo';
+    font-size: 30px;
+    color: #000000;
+    padding: 0px 128px 0px 0px;
+}
+
+.params-item {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    /* padding: 2px; */
+    padding: 8px 4px 0px 4px;
+    text-align: center;
+    /* line-height: 50px; */
+    background: rgba(245, 245, 245, 0.4);
+}
+
+.model-container_row {
+    display: flex;
+}
+
+.card-model_container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===========contact====== */
+.contact-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-block {
+    display: flex;
+    flex-direction: column;
+    height: 560px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.block1 {
+    background-color: #FFF9E2;
+    border-right: 1px solid #000000;
+}
+
+.block2 {
+    background-color: #FFF0ED;
+    border-right: 1px solid #000000;
+}
+
+.block3 {
+    background-color: #EFFDFF;
+    border-right: 1px solid #000000;
+}
+
+.block4 {
+    background-color: #ECF0FF;
+    border-right: 1px solid #000000;
+}
+
+.contact-name {
+    position: absolute;
+    font-family: 'Panama Demo';
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.contact-position {
+    /* position: absolute; */
+    margin-top: 60px;
+    font-family: 'Arial Narrow';
+    font-size: 16px;
+    /* line-height: 100%; */
+    text-transform: uppercase;
+    width: 200px;
+    text-align: center;
+}
+
+.contact-info {
+    /* position: relative; */
+    margin-top: 480px;
+    font-family: 'TT Norms Pro';
+    font-size: 16px;
+    line-height: 90%;
+    position: absolute;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* =========footer============ */
+.footer {
+    display: flex;
+    font-family: "Arial Narrow";
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000000;
+    /* height: 50vw; */
+    height: 750px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: #F8F6F2;
+}
+
+.footer-left {
+    background-image: url("../img/footrer-img.png");
+    background-size: cover;
+    overflow: hidden;
+    width: 50%;
+    height: auto;
+}
+
+.footer-left_logo {
+    font-family: 'RealMadrid2009';
+    font-size: 24px;
+    color: #F7F7F7;
+    padding: 28px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0 30px 30px;
+    background-color: #F8F6F2;
+}
+
+.footer-right_btn-border {
+    border: 1px solid #000000;
+    width: 206px;
+    height: 52px;
+    border-radius: 14px;
+    margin-top: 130px;
+}
+
+.footer-right_btn-content {
+    margin: 16px 29px;
+}
+
+.footer-right_text-centr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.footer-right_social-media {
+    padding-left: 130px;
+}
