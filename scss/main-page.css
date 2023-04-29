@@ -1,0 +1,113 @@
+/* ==========main============= */
+.main-img {
+  flex: 1;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.block-img {
+  display: flex;
+}
+
+.card-model {
+  display: flex;
+  justify-content: space-around;
+  /* background-image: url("../img/main/img-card-1.png"); */
+  width: 504px;
+  height: 745px;
+}
+
+.card-model_block {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+/* ----models card img */
+/* .card-one {
+    background-image: url("../img/main/img-card-1.png");
+}
+
+.card-two {
+    background-image: url("../img/main/img-card-2.png");
+}
+
+.card-three {
+    background-image: url("../img/main/img-card-3.png");
+    border-right: 1px solid #000000;
+}
+
+.card-four {
+    background-image: url("../img/main/img-card-4.png");
+}
+
+.card-five {
+    background-image: url("../img/main/img-card-2.png");
+}
+
+.card-six {
+    background-image: url("../img/main/img-card-6.png");
+} */
+/* ------------------- */
+.models-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-bottom: 16px;
+}
+
+.models-info_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.models-params {
+  display: flex;
+  align-items: center;
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.models-parameters {
+  display: flex;
+  padding: 0px 20px 0px 25px;
+}
+
+.models-name {
+  font-family: "Panama Demo";
+  font-size: 30px;
+  color: #000000;
+  /* padding: 0px 100px 0px 0px; */
+}
+
+.params-item {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  /* padding: 2px; */
+  padding: 11px 6px 0px 6px;
+  text-align: center;
+  /* line-height: 50px; */
+  background: rgba(245, 245, 245, 0.4);
+}
+
+.model-container_row {
+  display: flex;
+}
+
+.card-model_container {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=main-page.css.map */

@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('../fonts/arialnarrow.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('../fonts/TTNormsPro-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Panama Demo';
+    src: url('../fonts/Panama\ Demo\ Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Druk Cyr';
+    src: url('../fonts/DrukCond-Super-Trial.otf');
+}
+
+@font-face {
+    font-family: 'RealMadrid2009';
+    src: url('../fonts/RealMadrid2009.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+$primaryColor: #000000;
+$backgroundColorLogo: #F7F0F0;
+// ===== bp ======
+$tablet-bp-max: 980px;
+$tablet-bp-min: 834px;
+$desk-bp-min: 1520px;
+$desk-bp-max: 1700px;
+$max-bp: 1200px;
+$min-bp: 390px;
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+@import 'header.scss';
+@import 'main-page.scss';
+@import 'about-page.scss';
+@import 'contact.scss';
+@import 'footer.scss';

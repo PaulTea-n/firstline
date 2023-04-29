@@ -1,0 +1,155 @@
+.header-container {
+    display: flex;
+    padding: 24px;
+    font-family: 'Arial Narrow';
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 100%;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #000000;
+    // --------------------------------------
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    @media(max-width: $tablet-bp-max) {
+        display: none;
+    }
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'RealMadrid2009';
+}
+
+.nav-left {
+    display: flex;
+    gap: 85px;
+    align-items: flex-end;
+
+    @media(max-width: $desk-bp-min) {
+        gap: 40px;
+    }
+}
+
+.nav-centr {
+    display: flex;
+    gap: 85px;
+
+    @media(max-width: $desk-bp-min) {
+        gap: 40px;
+    }
+}
+
+.nav-right {
+    display: flex;
+    gap: 85px;
+
+    @media(max-width: $desk-bp-min) {
+        gap: 40px;
+    }
+}
+
+.header-container_tab {
+    display: none;
+
+    @media(max-width: $tablet-bp-max) {
+        display: block;
+        padding: 20px;
+        font-family: 'Arial Narrow';
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 100%;
+        background-color: #FFFFFF;
+        border-bottom: 1px solid #000000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+    .logo-tab {
+        font-size: 28px;
+        font-weight: bold;
+        font-family: 'RealMadrid2009';
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-branding {
+    font-size: 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    opacity: 0.9;
+}
+
+.nav-link {
+    transition: 0.3s ease-out;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: #000000;
+}
+
+@media(max-width:$tablet-bp-max) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 68px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 6px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}

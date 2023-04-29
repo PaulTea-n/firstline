@@ -1,0 +1,58 @@
+/* =========footer============ */
+.footer {
+  display: flex;
+  font-family: "Arial Narrow";
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  /* height: 50vw; */
+  /* height: 750px; */
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
+  position: relative;
+}
+
+.footer-img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.footer-left_logo {
+  font-family: "RealMadrid2009";
+  font-size: 24px;
+  color: #F7F7F7;
+  padding: 28px;
+  position: absolute;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px 0px 30px;
+}
+
+.footer-right_btn-border {
+  border: 1px solid #000000;
+  width: 206px;
+  height: 52px;
+  border-radius: 14px;
+  margin: 180px 0px 67px 0px;
+}
+
+.footer-right_btn-content {
+  margin: 16px 29px;
+}
+
+.footer-right_text-centr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 50px;
+  /* width: 1000px; */
+}
+
+.footer-right_text-btm {
+  position: absolute;
+  bottom: 25px;
+}/*# sourceMappingURL=footer.css.map */
