@@ -88,6 +88,18 @@
     font-size: 16px;
     font-weight: bold;
     color: #000000;
+
+    @media(max-width: $desk-bp-min) {
+        width: 100%;
+        justify-content: space-around;
+        font-size: 13px;
+    }
+
+    @media(max-width: $mobile-bp) {
+        width: 100%;
+        justify-content: space-around;
+        font-size: 9px;
+    }
 }
 
 .models-parameters {
@@ -99,7 +111,17 @@
     font-family: 'Panama Demo';
     font-size: 30px;
     color: #000000;
+
     /* padding: 0px 100px 0px 0px; */
+    @media(max-width: $desk-bp-min) {
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+
+    @media(max-width: $mobile-bp) {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
 }
 
 .params-item {
@@ -113,6 +135,20 @@
     text-align: center;
     /* line-height: 50px; */
     background: rgba(245, 245, 245, 0.4);
+
+    @media(max-width: $desk-bp-min) {
+        width: 22px;
+        height: 22px;
+        padding: 8px 4px 0px 4px;
+        background: rgba(245, 245, 245, 0.6);
+    }
+
+    @media(max-width: $mobile-bp) {
+        width: 16px;
+        height: 16px;
+        padding: 4px 2px 0px 2px;
+        background: rgba(245, 245, 245, 0.6);
+    }
 }
 
 .model-container_row {
