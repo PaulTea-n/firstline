@@ -847,7 +847,7 @@ a {
 }
 
 .footer-right_btn-content {
-  margin: 16px 29px;
+  margin: 16px 0px 0px 29px;
 }
 
 .footer-right_text-centr {
@@ -865,6 +865,6 @@ a {
 
 @media (max-width: 980px) {
   .footer-right_text-top {
-    width: 200px;
+    width: 220px;
   }
 }/*# sourceMappingURL=main.css.map */

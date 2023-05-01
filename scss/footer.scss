@@ -144,7 +144,7 @@
 }
 
 .footer-right_btn-content {
-    margin: 16px 29px;
+    margin: 16px 0px 0px 29px;
 }
 
 .footer-right_text-centr {
@@ -162,6 +162,6 @@
 
 .footer-right_text-top {
     @media(max-width: $tablet-bp-max) {
-        width: 200px;
+        width: 220px;
     }
 }
