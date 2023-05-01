@@ -1,4 +1,8 @@
 /* ===========contact====== */
+.contact {
+  margin-top: 72px;
+}
+
 .contact-container {
   display: flex;
   flex-direction: row;

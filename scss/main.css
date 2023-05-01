@@ -185,6 +185,10 @@ a {
   }
 }
 /* ==========main============= */
+.main {
+  margin-top: 72px;
+}
+
 .main-img {
   flex: 1;
   height: auto;
@@ -700,7 +704,25 @@ a {
   }
 }
 
+.models {
+  margin-top: 72px;
+}
+
+.md3 {
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+}
+
+.form {
+  margin-top: 72px;
+}
+
 /* ===========contact====== */
+.contact {
+  margin-top: 72px;
+}
+
 .contact-container {
   display: flex;
   flex-direction: row;
@@ -824,6 +846,10 @@ a {
   color: #F7F0F0;
   padding: 28px;
   position: absolute;
+}
+
+.black-logo {
+  color: #000000;
 }
 
 .footer-right {
