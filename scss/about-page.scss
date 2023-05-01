@@ -308,11 +308,11 @@
 }
 
 .photo1 {
-    max-width: 40%;
+    width: 40%;
     margin-left: 20px;
 
     @media(max-width: $mobile-bp) {
-        max-width: 100%;
+        width: auto;
         margin-left: 0px;
     }
 }
@@ -320,20 +320,20 @@
 .photo2 {
     margin-left: 63px;
     margin-top: 73px;
-    max-width: 23%;
+    width: 23%;
 
     @media(max-width: $mobile-bp) {
-        max-width: 100%;
+        width: auto;
         margin: 0;
     }
 }
 
 .photo3 {
     margin-top: 88px;
-    max-width: 20%;
+    width: 20%;
 
     @media(max-width: $mobile-bp) {
-        max-width: 100%;
+        width: auto;
         margin: 0;
     }
 }
