@@ -13,7 +13,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 1000;
 
     @media(max-width: $tablet-bp-max) {
         display: none;
@@ -71,7 +71,7 @@
         top: 0;
         left: 0;
         right: 0;
-        z-index: 10;
+        z-index: 1000;
     }
 
     .logo-tab {
@@ -95,7 +95,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    z-index: 1000;
     opacity: 0.9;
 }
 
