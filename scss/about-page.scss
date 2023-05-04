@@ -21,18 +21,13 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 100%;
+    // width: 100%;
+    flex-grow: 1;
 
     // object-fit: cover;
     // object-position: center;
     @media(max-width: $desk-bp-max) {
         min-width: 150px;
-    }
-}
-
-.right-position {
-    @media(max-width: $mobile-bp) {
-        right: 1px;
     }
 }
 
@@ -44,7 +39,7 @@
 }
 
 .one {
-    margin-top: -3px;
+    margin-top: -5px;
 
     @media(max-width: $mobile-bp) {
         margin-top: -1px;
@@ -58,7 +53,7 @@
 }
 
 .photo-block {
-    flex: 1;
+    // flex: 1;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -66,17 +61,21 @@
     object-fit: cover;
     object-position: center;
     position: relative;
+
+    @media(max-width: $mobile-bp) {
+        width: 100%;
+    }
 }
 
 .shot-img {
-    min-height: 82.6%;
+    min-height: 82.05%;
     position: absolute;
     width: 100%;
     object-fit: cover;
     object-position: center;
 
     @media(max-width: $tablet-bp-max) {
-        min-height: 83.2%;
+        min-height: 82.45%;
     }
 
     @media(max-width: $mobile-bp) {
@@ -93,7 +92,7 @@
     object-position: center;
 
     @media(max-width: $mobile-bp) {
-        bottom: 0px;
+        bottom: -1px;
     }
 }
 
@@ -111,7 +110,7 @@
     align-items: flex-start;
     position: relative;
     width: 100%;
-    margin-top: -2px;
+    // margin-top: -2px;
     background-color: #FFFFFF;
     z-index: 20;
 }
@@ -169,10 +168,10 @@
     }
 
     .four-2 {
-        left: 1px;
 
+        // left: 1px;
         @media(max-width: $tablet-bp-max) {
-            margin-left: -2px;
+            margin-left: -1px;
             grid-area: 1 / 2 / 2 / 3;
         }
     }
