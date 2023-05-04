@@ -80,7 +80,7 @@
 
 .text-block-img {
     position: absolute;
-    bottom: -3px;
+    bottom: -5px;
     z-index: 1;
     width: 100%;
     object-fit: cover;
@@ -92,7 +92,11 @@
 }
 
 .second {
-    margin-top: -5px;
+    margin-top: -7px;
+
+    @media(max-width: $mobile-bp) {
+        margin-top: -4px;
+    }
 }
 
 .about-line_three {
