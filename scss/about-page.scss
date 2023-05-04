@@ -30,6 +30,12 @@
     }
 }
 
+.right-position {
+    @media(max-width: $mobile-bp) {
+        right: 1px;
+    }
+}
+
 .about-img {
     flex: 1;
     // height: auto;

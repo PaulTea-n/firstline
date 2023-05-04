@@ -370,6 +370,12 @@ a {
   }
 }
 
+@media (max-width: 480px) {
+  .right-position {
+    right: 1px;
+  }
+}
+
 .about-img {
   flex: 1;
   -o-object-fit: cover;
