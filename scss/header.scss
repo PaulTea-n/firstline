@@ -118,12 +118,16 @@
     width: 100%;
     transition: 0.3s;
     // margin-left: -20px;
-    height: 100%;
+    height: 100vh;
+}
+
+.nav-menu {
+    margin: 0px 20px;
 }
 
 .nav-container.active {
     top: 62px;
-    padding-top: 18px;
+    padding-top: 16px;
     // left: 0px;
 }
 
@@ -177,7 +181,7 @@
 }
 
 .nav-item {
-    margin: 24px 20px 0px 20px;
+    margin: 24px 20px 0px 0px;
     font-family: 'Arial Narrow';
     font-size: 14px;
 
@@ -196,6 +200,7 @@
     position: relative;
     top: 56px;
     margin: 0px 20px;
+    padding-bottom: 40%;
 }
 
 .nav-menu_contact::before {
@@ -205,6 +210,12 @@
     width: 100%;
     height: 1px;
     background-color: $black;
+}
+
+.contact-btn_mob {
+    @media(max-width: $mobile-bp) {
+        margin: 0px 15px 0px 0px;
+    }
 }
 
 .contact-btn_mob .nav-link {
@@ -218,5 +229,12 @@
         border-radius: 40px;
         border: 1px solid $black;
         padding: 10px 6px;
+    }
+}
+
+.contact-btn_mob .nav-link:hover {
+    @media(max-width: $mobile-bp) {
+        background-color: $white;
+        color: $black;
     }
 }
