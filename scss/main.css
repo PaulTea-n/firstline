@@ -135,6 +135,7 @@ a {
   z-index: 888;
   position: fixed;
   top: -150%;
+  overflow: auto;
   left: 0px;
   gap: 0;
   flex-direction: column;
@@ -264,7 +265,7 @@ a {
 }
 
 .one {
-  margin-top: -5px;
+  margin: -4px -1px 0px -1px;
 }
 @media (max-width: 480px) {
   .one {
@@ -648,6 +649,9 @@ a {
   flex-direction: column;
 }
 
+.text-betweenlines-desck {
+  margin: 0px 0px -6px -6px;
+}
 @media (max-width: 480px) {
   .text-betweenlines-desck {
     display: none;

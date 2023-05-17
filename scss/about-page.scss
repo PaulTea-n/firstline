@@ -39,7 +39,7 @@
 }
 
 .one {
-    margin-top: -5px;
+    margin: -4px -1px 0px -1px;
 
     @media(max-width: $mobile-bp) {
         margin-top: -1px;
@@ -410,6 +410,8 @@
 }
 
 .text-betweenlines-desck {
+    margin: 0px 0px -6px -6px;
+
     @media(max-width: $mobile-bp) {
         display: none;
     }
