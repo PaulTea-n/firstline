@@ -19,12 +19,11 @@
     }
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'RealMadrid2009';
-}
-
+// .logo {
+//     font-size: 24px;
+//     font-weight: bold;
+//     font-family: 'RealMadrid2009';
+// }
 .nav-left {
     display: flex;
     gap: 85px;
@@ -130,11 +129,17 @@
 .nav-link {
     transition: 0.3s ease-out;
     color: $black;
+    // text-shadow: 1px 1px 1px $black;
 }
 
 .nav-link:hover {
     color: $smoky;
     transition: all 0.3s ease-in-out;
+
+    @media(max-width: $mobile-bp) {
+        color: $white;
+        -webkit-text-stroke: 1px $black;
+    }
 }
 
 .hamburger {

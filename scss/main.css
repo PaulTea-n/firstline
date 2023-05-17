@@ -47,12 +47,6 @@ a {
   }
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "RealMadrid2009";
-}
-
 .nav-left {
   display: flex;
   gap: 85px;
@@ -163,6 +157,12 @@ a {
 .nav-link:hover {
   color: #CDCDCD;
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 480px) {
+  .nav-link:hover {
+    color: #FFFFFF;
+    -webkit-text-stroke: 1px #151515;
+  }
 }
 
 .hamburger {
