@@ -2,7 +2,7 @@
 //=================== newbar menu ====================
 
 const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const navMenu = document.querySelector(".nav-container");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
@@ -95,18 +95,35 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ---file preview---
-  const formImage = document.getElementById("formImage");
-  // img preview
-  const formPreview = document.getElementById("formPreview");
+  const formImage1 = document.getElementById("formImage1");
+  const formImage2 = document.getElementById("formImage2");
+  const formImage3 = document.getElementById("formImage3");
+  const formImage4 = document.getElementById("formImage4");
 
-  formImage.addEventListener("change", () => {
-    uploadFile(formImage.files[0]);
+  // img preview
+  const formPreview1 = document.getElementById("formPreview1");
+  const formPreview2 = document.getElementById("formPreview2");
+  const formPreview3 = document.getElementById("formPreview3");
+  const formPreview4 = document.getElementById("formPreview4");
+
+  formImage1.addEventListener("change", () => {
+    uploadFile1(formImage1.files[0], formPreview1);
+  });
+  formImage2.addEventListener("change", () => {
+    uploadFile2(formImage2.files[0], formPreview2);
+  });
+  formImage3.addEventListener("change", () => {
+    uploadFile3(formImage3.files[0], formPreview3);
+  });
+  formImage4.addEventListener("change", () => {
+    uploadFile4(formImage4.files[0], formPreview4);
   });
 
-  function uploadFile(file) {
+  function uploadFile1(file) {
     if (!["image/jpeg", "image/png", "image/gif"].includes(file.type)) {
       alert("only images are allowed");
-      formImage.value = "";
+      formImage1.value = "";
+
       return;
     }
     if (file.size > 5 * 1024 * 1024) {
@@ -116,7 +133,73 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const reader = new FileReader();
     reader.onload = function (e) {
-      formPreview.innerHTML = `<img src="${e.target.result}" alt="photo">`;
+      formPreview1.innerHTML = `<img src="${e.target.result}" alt="photo">`;
+    };
+    reader.onerror = function (e) {
+      alert("Error");
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function uploadFile2(file) {
+    if (!["image/jpeg", "image/png", "image/gif"].includes(file.type)) {
+      alert("only images are allowed");
+      formImage2.value = "";
+
+      return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      alert("File requirement is 5MB per image");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      formPreview2.innerHTML = `<img src="${e.target.result}" alt="photo">`;
+    };
+    reader.onerror = function (e) {
+      alert("Error");
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function uploadFile3(file) {
+    if (!["image/jpeg", "image/png", "image/gif"].includes(file.type)) {
+      alert("only images are allowed");
+      formImage3.value = "";
+
+      return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      alert("File requirement is 5MB per image");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      formPreview3.innerHTML = `<img src="${e.target.result}" alt="photo">`;
+    };
+    reader.onerror = function (e) {
+      alert("Error");
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function uploadFile4(file) {
+    if (!["image/jpeg", "image/png", "image/gif"].includes(file.type)) {
+      alert("only images are allowed");
+      formImage4.value = "";
+
+      return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      alert("File requirement is 5MB per image");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      formPreview4.innerHTML = `<img src="${e.target.result}" alt="photo">`;
     };
     reader.onerror = function (e) {
       alert("Error");

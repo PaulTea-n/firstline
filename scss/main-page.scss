@@ -1,41 +1,24 @@
 /* ==========main============= */
 
-.main {
-    margin-top: 72px;
-}
-
-.main-img {
-    flex: 1;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-}
-
-.block-img {
-    display: flex;
-}
-
-.card-model {
-    display: flex;
-    justify-content: space-around;
-    /* background-image: url("../img/main/img-card-1.png"); */
-    width: 504px;
-    height: 745px;
-}
-
-.card-model_block {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-
-    @media(max-width: $desk-bp-max) {
-        min-width: 150px;
-    }
-}
-
+// .main {
+//     margin-top: 72px;
+// }
+// .main-img {
+//     flex: 1;
+//     height: auto;
+//     object-fit: cover;
+//     object-position: center;
+// }
+// .block-img {
+//     display: flex;
+// }
+// .card-model {
+//     display: flex;
+//     justify-content: space-around;
+//     /* background-image: url("../img/main/img-card-1.png"); */
+//     width: 504px;
+//     height: 745px;
+// }
 
 /* ----models card img */
 
@@ -68,97 +51,9 @@
 
 /* ------------------- */
 
-.models-info {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    padding-bottom: 16px;
-}
-
-.models-info_block {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.models-params {
-    display: flex;
-    align-items: center;
-    font-family: 'TT Norms Pro';
-    font-size: 16px;
-    font-weight: bold;
-    color: #000000;
-
-    @media(max-width: $desk-bp-min) {
-        width: 100%;
-        justify-content: space-around;
-        font-size: 13px;
-    }
-
-    @media(max-width: $mobile-bp) {
-        width: 100%;
-        justify-content: space-around;
-        font-size: 9px;
-    }
-}
-
-.models-parameters {
-    display: flex;
-    padding: 0px 20px 0px 25px;
-}
-
-.models-name {
-    font-family: 'Panama Demo';
-    font-size: 30px;
-    color: #000000;
-
-    /* padding: 0px 100px 0px 0px; */
-    @media(max-width: $desk-bp-min) {
-        font-size: 34px;
-        margin-bottom: 20px;
-    }
-
-    @media(max-width: $mobile-bp) {
-        font-size: 24px;
-        margin-bottom: 15px;
-    }
-}
-
-.params-item {
-    // width: 28px;
-    flex: 0 0 28px;
-    height: 28px;
-    border: 1px solid #000000;
-    border-radius: 50%;
-    /* padding: 2px; */
-    // padding: 8px 4px 0px 4px;
-    padding: 11px 6px 0px 6px;
-    text-align: center;
-    /* line-height: 50px; */
-    background: rgba(245, 245, 245, 0.4);
-
-    @media(max-width: $desk-bp-min) {
-        // width: 22px;
-        flex: 0 0 22px;
-        height: 22px;
-        padding: 8px 4px 0px 4px;
-        background: rgba(245, 245, 245, 0.6);
-    }
-
-    @media(max-width: $mobile-bp) {
-        // width: 16px;
-        flex: 0 0 16px;
-        height: 16px;
-        padding: 4px 2px 0px 2px;
-        background: rgba(245, 245, 245, 0.6);
-    }
-}
-
-.model-container_row {
-    display: flex;
-}
-
-.card-model_container {
-    display: flex;
-    flex-direction: column;
-}
+// .models-info {
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: flex-end;
+//     padding-bottom: 16px;
+// }
