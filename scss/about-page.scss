@@ -285,20 +285,15 @@
 .about-models-info {
     position: relative;
     width: 100%;
-    height: 100%;
+    // height: 100%;
     overflow: hidden;
+    bottom: 60px;
     // position: absolute;
     // bottom: 16px;
     // left: 0;
     // right: 0;
     // z-index: 1;
-    background-image: url('../img/about/podloga.svg');
-    // backdrop-filter: blur(10px);
-    // border-radius: 20px;
-    // filter: blur(15px);
-    // border-radius: 60px;
-    // backdrop-filter: blur(2.5px);
-    // background: linear-gradient(133.7deg, rgba(255, 255, 255, 0.44) -20.68%, rgba(255, 255, 255, 0.33) 119.09%);
+    // background-image: url('../img/about/podloga.svg');
 }
 
 .backdrop {
@@ -319,11 +314,27 @@
     // ------------
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0px 20px;
+    // @media(max-width: $desk-bp-min) {
+    //     display: flex;
+    //     flex-direction: column;
+    // }
+}
 
-    @media(max-width: $desk-bp-min) {
-        display: flex;
-        flex-direction: column;
+.models-name {
+    font-family: 'MS Mincho';
+    font-size: 25px;
+    color: $black;
+
+    /* padding: 0px 100px 0px 0px; */
+    // @media(max-width: $desk-bp-min) {
+    //     font-size: 25px;
+    //     margin-bottom: 20px;
+    // }
+    @media(max-width: $mobile-bp) {
+        font-size: 24px;
+        margin-bottom: 15px;
     }
 }
 
@@ -332,15 +343,16 @@
     align-items: center;
     font-family: 'TT Norms Pro';
     font-size: 16px;
-    font-weight: bold;
-    color: #000000;
+    color: $black;
+    gap: 25px;
+    // text-transform: uppercase;
+    justify-content: space-between;
 
-    @media(max-width: $desk-bp-min) {
-        width: 100%;
-        justify-content: space-around;
-        font-size: 13px;
-    }
-
+    // @media(max-width: $desk-bp-min) {
+    //     width: 100%;
+    //     justify-content: space-around;
+    //     font-size: 13px;
+    // }
     @media(max-width: $mobile-bp) {
         width: 100%;
         justify-content: space-around;
@@ -350,47 +362,29 @@
 
 .models-parameters {
     display: flex;
-    padding: 0px 44px 0px 27px;
-}
-
-.models-name {
-    font-family: 'MS Mincho';
-    font-size: 30px;
-    color: #000000;
-
-    /* padding: 0px 100px 0px 0px; */
-    @media(max-width: $desk-bp-min) {
-        font-size: 34px;
-        margin-bottom: 20px;
-    }
-
-    @media(max-width: $mobile-bp) {
-        font-size: 24px;
-        margin-bottom: 15px;
-    }
+    // padding: 0px 44px 0px 27px;
 }
 
 .params-item {
-    // width: 28px;
-    flex: 0 0 28px;
-    height: 28px;
+    width: 20px;
+    // flex: 0 0 20px;
+    height: 20px;
     border: 1px solid #000000;
     border-radius: 50%;
     /* padding: 2px; */
     // padding: 8px 4px 0px 4px;
-    padding: 11px 6px 0px 6px;
+    padding: 5px 3px 0px 3px;
     text-align: center;
     /* line-height: 50px; */
     background: rgba(245, 245, 245, 0.4);
 
-    @media(max-width: $desk-bp-min) {
-        // width: 22px;
-        flex: 0 0 22px;
-        height: 22px;
-        padding: 8px 4px 0px 4px;
-        background: rgba(245, 245, 245, 0.6);
-    }
-
+    // @media(max-width: $desk-bp-min) {
+    //     // width: 22px;
+    //     flex: 0 0 22px;
+    //     height: 22px;
+    //     padding: 8px 4px 0px 4px;
+    //     background: rgba(245, 245, 245, 0.6);
+    // }
     @media(max-width: $mobile-bp) {
         // width: 16px;
         flex: 0 0 16px;

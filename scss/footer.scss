@@ -5,7 +5,7 @@
     font-family: "Arial Narrow";
     font-size: 20px;
     text-transform: uppercase;
-    color: #000000;
+    color: $black;
     /* height: 50vw; */
     /* height: 750px; */
     border-bottom: 1px solid #000000;
@@ -54,10 +54,7 @@
 }
 
 .footer-left_logo {
-    font-family: 'RealMadrid2009';
-    font-size: 24px;
-    color: $white;
-    padding: 28px;
+    padding: 20px;
     position: absolute;
 }
 
@@ -69,38 +66,41 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 30px 0px 25px 30px;
-    // background-color: #F8F6F2;
-    // width: 48%;
-}
-
-.footer-right_btn-border {
-    border: 1px solid #000000;
-    width: 206px;
-    height: 52px;
-    border-radius: 14px;
-    margin: 0px 0px 60px 0px;
-
-    @media(max-width: $tablet-bp-max) {
-        margin: 0px 0px 40px 0px;
-    }
-}
-
-.footer-right_btn-content {
-    margin: 16px 0px 0px 29px;
+    padding: 30px;
 }
 
 .footer-right_text-centr {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    row-gap: 50px;
-    /* width: 1000px; */
+    grid-column-gap: 60px;
+    grid-row-gap: 50px;
+    width: max-content;
+}
+
+.footer-nav1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.footer-nav2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.footer-nav3 {
+    grid-area: 2 / 1 / 3 / 2;
 }
 
 .footer-block_centr {
     display: flex;
     flex-direction: column;
+}
+
+.item {
+    margin-top: 10px;
+}
+
+.item .menu-item {
+    color: $black;
 }
 
 .footer-right_text-top {
