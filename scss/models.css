@@ -1,3 +1,42 @@
 .models {
   margin-top: 72px;
+}
+
+.models-row4 {
+  display: flex;
+}
+
+.models-card {
+  position: relative;
+  width: 100%;
+}
+
+.models-prewiu {
+  width: 100%;
+}
+
+.podloga {
+  position: absolute;
+  z-index: 1;
+  bottom: 50px;
+  text-align: center;
+}
+
+.models-information {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.city {
+  grid-area: 2/1/3/2;
+}
+
+.name {
+  grid-area: 1/2/2/3;
+}
+
+.parameters {
+  grid-area: 2/2/3/3;
+  display: flex;
 }/*# sourceMappingURL=models.css.map */
