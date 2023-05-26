@@ -8,14 +8,24 @@
     width: 100%;
     flex-direction: row;
     align-items: center;
-    max-height: 700px;
+    max-height: 840px;
+
+    @media(max-width: $tablet-bp-max) {
+        flex-direction: column;
+        max-height: 1256px;
+    }
 }
 
+// --------------------------
 .inform-about_model {
     display: flex;
     flex: 1;
     flex-direction: column;
     align-items: center;
+
+    @media(max-width: $tablet-bp-max) {
+        order: 2;
+    }
 }
 
 .my-name {
@@ -82,12 +92,24 @@
 // -----------------------
 .model-page_photo {
     flex: 1;
-    max-width: 33%;
-    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // max-width: 33%;
+    // max-height: 550px;
+    min-width: 268px;
+    height: 820px;
     overflow: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
     cursor: pointer;
+
+    @media(max-width: $tablet-bp-max) {
+        order: 1;
+        width: 50%;
+        // text-align: center;
+        // max-height: 740px;
+    }
 }
 
 .model-page_photo::-webkit-scrollbar {
@@ -95,14 +117,22 @@
 }
 
 .models-scrol_img {
-    width: 107%;
-    max-width: 535px;
+    // width: 100%;
+    width: 535px;
+    margin-bottom: 60px;
     // max-height: 700px;
 }
 
 // -------------------
 .inform-parameters-model {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media(max-width: $tablet-bp-max) {
+        order: 3;
+    }
 }
 
 .my-parameters_list {
@@ -130,6 +160,15 @@
 
 .my-value {
     display: flex;
+}
+
+.my-params-item_model {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    padding: 5px 3px 0px 3px;
+    text-align: center;
 }
 
 .my-parameters_item {

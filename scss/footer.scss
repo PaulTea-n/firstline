@@ -11,6 +11,7 @@
     border-bottom: 1px solid #000000;
     // background-color: #F8F6F2;
     position: relative;
+    background: $white;
 
     @media(max-width: $tablet-bp-max) {
         min-height: 600px;
