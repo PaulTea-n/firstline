@@ -7,7 +7,19 @@
 .contact-container {
     display: flex;
     flex-direction: row;
-    border: 1px solid $black;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+
+    @media(max-width: $tablet-bp-max) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    @media(max-width: $mobile-bp) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .contact-block {
@@ -18,6 +30,10 @@
     width: 100%;
     // justify-content: center;
     align-items: center;
+
+    @media(max-width: $tablet-bp-max) {
+        border-top: 1px solid $black;
+    }
 }
 
 .contact-block:hover {
@@ -76,7 +92,6 @@
 
 .block4 {
     background-color: #ECF0FF;
-    border-right: 1px solid #000000;
     transition: all 0.5s ease;
 }
 
