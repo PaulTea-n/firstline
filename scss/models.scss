@@ -29,17 +29,11 @@
     // border-top: 1px solid black;
 }
 
-// .mob-row3_none {
+// .block-none_mob {
 //     @media(max-width: $mobile-bp) {
 //         display: none;
 //     }
 // }
-.block-none_mob {
-    @media(max-width: $mobile-bp) {
-        display: none;
-    }
-}
-
 .models-card {
     position: relative;
     width: 100%;

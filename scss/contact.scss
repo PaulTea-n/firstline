@@ -1,67 +1,121 @@
 /* ===========contact====== */
 
 .contact {
-    margin-top: 72px;
+    margin-top: 63px;
 }
 
 .contact-container {
     display: flex;
     flex-direction: row;
+    border: 1px solid $black;
 }
 
 .contact-block {
+    position: relative;
     display: flex;
     flex-direction: column;
-    height: 560px;
+    height: 550px;
     width: 100%;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
 }
 
+.contact-block:hover {
+    color: $white;
+
+    .contact-mail {
+        color: $white;
+    }
+}
+
+.contact-info_block {
+    position: absolute;
+    top: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
 .block1 {
-    background-color: #FFF9E2;
+    background: #FFF9E2;
     border-right: 1px solid #000000;
+    transition: all 0.5s ease;
+}
+
+.block1:hover {
+    background-image: url("../img/contact/hover-contact.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
 }
 
 .block2 {
     background-color: #FFF0ED;
     border-right: 1px solid #000000;
+    transition: all 0.5s ease;
+}
+
+.block2:hover {
+    background: url("../img/contact/hover-contact.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
 }
 
 .block3 {
     background-color: #EFFDFF;
     border-right: 1px solid #000000;
+    transition: all 0.5s ease;
+}
+
+.block3:hover {
+    background: url("../img/contact/hover-contact.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
 }
 
 .block4 {
     background-color: #ECF0FF;
     border-right: 1px solid #000000;
+    transition: all 0.5s ease;
+}
+
+.block4:hover {
+    background: url("../img/contact/hover-contact.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
 }
 
 .contact-name {
-    position: absolute;
-    font-family: 'Panama Demo';
-    font-size: 30px;
-    line-height: 30px;
+    font-family: 'MS Mincho';
+    font-size: 25px;
     text-transform: uppercase;
 }
 
 .contact-position {
-    /* position: absolute; */
-    margin-top: 60px;
     font-family: 'Arial Narrow';
-    font-size: 16px;
-    /* line-height: 100%; */
+    font-size: 14px;
     text-transform: uppercase;
-    width: 200px;
+    // width: 200px;
+    margin-top: 10px;
     text-align: center;
+    line-height: 110%;
 }
 
 .contact-info {
-    /* position: relative; */
-    margin-top: 480px;
-    font-family: 'TT Norms Pro';
-    font-size: 16px;
-    line-height: 90%;
     position: absolute;
+    bottom: 20px;
+    font-family: 'TT Norms Pro';
+    font-size: 12px;
+    line-height: 100%;
+}
+
+.contact-mail {
+    text-decoration: none;
+    color: $black;
+}
+
+.contact-mail:hover {
+    color: $white;
 }

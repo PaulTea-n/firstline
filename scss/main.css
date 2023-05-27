@@ -675,12 +675,6 @@ a {
   display: flex;
 }
 
-@media (max-width: 480px) {
-  .block-none_mob {
-    display: none;
-  }
-}
-
 .models-card {
   position: relative;
   width: 100%;
@@ -836,7 +830,8 @@ a {
 }
 
 .model-page {
-  margin: 63px 20px 0px;
+  margin: 63px 0px 0px;
+  border-bottom: 1px solid #151515;
 }
 
 .inform-container {
@@ -849,7 +844,7 @@ a {
 @media (max-width: 980px) {
   .inform-container {
     flex-direction: column;
-    max-height: 1256px;
+    max-height: 1392px;
   }
 }
 
@@ -913,6 +908,7 @@ a {
   font-size: 16px;
   text-transform: uppercase;
   color: #151515;
+  margin-bottom: 36px;
 }
 
 .my-agency_list {
@@ -963,6 +959,7 @@ a {
 @media (max-width: 980px) {
   .inform-parameters-model {
     order: 3;
+    margin-bottom: 100px;
   }
 }
 
@@ -1024,6 +1021,25 @@ a {
   height: 30px;
   border-radius: 50%;
   background: #3F4249;
+}
+
+.models-page_container {
+  display: flex;
+}
+@media (max-width: 480px) {
+  .models-page_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1px;
+    grid-row-gap: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .block-none_mob {
+    display: none;
+  }
 }
 
 .form-page {
@@ -1213,69 +1229,120 @@ a {
 
 /* ===========contact====== */
 .contact {
-  margin-top: 72px;
+  margin-top: 63px;
 }
 
 .contact-container {
   display: flex;
   flex-direction: row;
+  border: 1px solid #151515;
 }
 
 .contact-block {
+  position: relative;
   display: flex;
   flex-direction: column;
-  height: 560px;
+  height: 550px;
   width: 100%;
-  justify-content: center;
   align-items: center;
 }
 
+.contact-block:hover {
+  color: #FFFFFF;
+}
+.contact-block:hover .contact-mail {
+  color: #FFFFFF;
+}
+
+.contact-info_block {
+  position: absolute;
+  top: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
 .block1 {
-  background-color: #FFF9E2;
+  background: #FFF9E2;
   border-right: 1px solid #000000;
+  transition: all 0.5s ease;
+}
+
+.block1:hover {
+  background-image: url("../img/contact/hover-contact.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
 }
 
 .block2 {
   background-color: #FFF0ED;
   border-right: 1px solid #000000;
+  transition: all 0.5s ease;
+}
+
+.block2:hover {
+  background: url("../img/contact/hover-contact.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
 }
 
 .block3 {
   background-color: #EFFDFF;
   border-right: 1px solid #000000;
+  transition: all 0.5s ease;
+}
+
+.block3:hover {
+  background: url("../img/contact/hover-contact.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
 }
 
 .block4 {
   background-color: #ECF0FF;
   border-right: 1px solid #000000;
+  transition: all 0.5s ease;
+}
+
+.block4:hover {
+  background: url("../img/contact/hover-contact.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
 }
 
 .contact-name {
-  position: absolute;
-  font-family: "Panama Demo";
-  font-size: 30px;
-  line-height: 30px;
+  font-family: "MS Mincho";
+  font-size: 25px;
   text-transform: uppercase;
 }
 
 .contact-position {
-  /* position: absolute; */
-  margin-top: 60px;
   font-family: "Arial Narrow";
-  font-size: 16px;
-  /* line-height: 100%; */
+  font-size: 14px;
   text-transform: uppercase;
-  width: 200px;
+  margin-top: 10px;
   text-align: center;
+  line-height: 110%;
 }
 
 .contact-info {
-  /* position: relative; */
-  margin-top: 480px;
-  font-family: "TT Norms Pro";
-  font-size: 16px;
-  line-height: 90%;
   position: absolute;
+  bottom: 20px;
+  font-family: "TT Norms Pro";
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.contact-mail {
+  text-decoration: none;
+  color: #151515;
+}
+
+.contact-mail:hover {
+  color: #FFFFFF;
 }
 
 /* =========footer============ */
