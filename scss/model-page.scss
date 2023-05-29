@@ -13,7 +13,7 @@
 
     @media(max-width: $tablet-bp-max) {
         flex-direction: column;
-        max-height: 1392px;
+        max-height: 1560px;
     }
 }
 
@@ -53,6 +53,10 @@
 .my-social_list {
     display: flex;
     gap: 15px;
+
+    @media(max-width: $tablet-bp-max) {
+        flex-direction: column;
+    }
 }
 
 .my-social_item {
@@ -64,6 +68,14 @@
     font-family: 'TT Norms Pro';
     font-size: 16px;
     background: $white;
+
+    @media(max-width: $tablet-bp-max) {
+        display: flex;
+        width: 200px;
+        height: 35px;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .my-social_item:hover {
@@ -105,6 +117,7 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
     cursor: pointer;
+    overflow-x: hidden;
 
     @media(max-width: $tablet-bp-max) {
         order: 1;
@@ -205,9 +218,7 @@
     @media(max-width: $mobile-bp) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 1px;
-        grid-row-gap: 0px;
+        // grid-template-rows: repeat(2, 1fr);
     }
 }
 

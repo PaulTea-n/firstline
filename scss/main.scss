@@ -43,6 +43,10 @@ a {
     text-decoration: none;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 @import 'header.scss';
 @import 'about-page.scss';
 @import 'models.scss';

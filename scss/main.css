@@ -26,6 +26,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .header-container {
   display: flex;
   padding: 20px;
@@ -257,6 +261,7 @@ a {
 /* ===========about========= */
 .about {
   margin-top: 63px;
+  overflow-x: hidden;
 }
 
 .about-block_container {
@@ -665,9 +670,7 @@ a {
   .models-row4 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 1px;
-    grid-row-gap: 0px;
   }
 }
 
@@ -844,7 +847,7 @@ a {
 @media (max-width: 980px) {
   .inform-container {
     flex-direction: column;
-    max-height: 1392px;
+    max-height: 1560px;
   }
 }
 
@@ -885,6 +888,11 @@ a {
   display: flex;
   gap: 15px;
 }
+@media (max-width: 980px) {
+  .my-social_list {
+    flex-direction: column;
+  }
+}
 
 .my-social_item {
   color: #151515;
@@ -895,6 +903,15 @@ a {
   font-family: "TT Norms Pro";
   font-size: 16px;
   background: #FFFFFF;
+}
+@media (max-width: 980px) {
+  .my-social_item {
+    display: flex;
+    width: 200px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .my-social_item:hover {
@@ -933,6 +950,7 @@ a {
   scrollbar-width: none;
   -ms-overflow-style: none;
   cursor: pointer;
+  overflow-x: hidden;
 }
 @media (max-width: 980px) {
   .model-page_photo {
@@ -1030,9 +1048,6 @@ a {
   .models-page_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 1px;
-    grid-row-gap: 0px;
   }
 }
 
