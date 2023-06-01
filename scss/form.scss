@@ -3,6 +3,16 @@
     margin-top: 63px;
     display: flex;
     background-color: $white;
+    border-bottom: 1px solid $black;
+    border-top: 1px solid $black;
+
+    @media(max-width: $tablet-bp-max) {
+        border: none;
+    }
+
+    @media(max-width: $mobile-bp) {
+        border-top: 1px solid $black;
+    }
 }
 
 .form-container {
@@ -10,6 +20,7 @@
 
     @media(max-width: $tablet-bp-max) {
         flex-direction: column;
+        width: 100%;
     }
 }
 
@@ -20,12 +31,34 @@
     @media(max-width: $tablet-bp-max) {
         width: 100%;
     }
+
+    @media(max-width: $mobile-bp) {
+        border-bottom: 1px solid $black;
+    }
+}
+
+.form-img_block {
+    display: flex;
+    margin-top: 120px;
+
+    @media(min-width: $desk-bp-min) {
+        margin-top: 0px;
+    }
+
+    @media(max-width: $tablet-bp-max) {
+        margin-top: 0px;
+    }
 }
 
 .right-block_form {
     grid-area: 2 / 2 / 3 / 3;
-    // width: 50%;
+    width: 50vw;
+    border-left: 1px solid $black;
+
     // margin: 30px 0px 30px 30px;
+    @media(max-width: $tablet-bp-max) {
+        width: 100%;
+    }
 }
 
 .wrapper-form {
@@ -44,6 +77,27 @@
     object-position: center;
     /* min-height: -webkit-fill-available; */
     height: 100%;
+
+    @media(max-width: $tablet-bp-max) {
+        display: none;
+    }
+
+    @media(max-width: $mobile-bp) {
+        display: block;
+    }
+}
+
+.form-img_tab {
+    display: none;
+
+    @media(max-width: $tablet-bp-max) {
+        display: block;
+        width: 100%;
+    }
+
+    @media(max-width: $mobile-bp) {
+        display: none;
+    }
 }
 
 .text-form_top {
@@ -145,6 +199,11 @@
     transition: all 0.5s ease 0s;
 }
 
+.form__input::placeholder {
+    color: $smoky;
+    /* Колір тексту плейсхолдера */
+}
+
 .form__input-massage {
     border: 1px solid $black;
     width: calc(100% - 30px);
@@ -157,6 +216,11 @@
     color: $black;
     background-color: $white;
     transition: all 0.5s ease 0s;
+}
+
+.form__input-massage::placeholder {
+    color: $smoky;
+    /* Колір тексту плейсхолдера */
 }
 
 textarea.form__input-massage {
@@ -227,12 +291,16 @@ textarea.form__input-massage {
 //     text-transform: uppercase;
 //     background-color: #F8F6F2;
 // }
+// ----------------------------------
 .file {
     display: flex;
+    gap: 15px;
 }
 
 .file__item {
     position: relative;
+    transition: all 0.3s ease;
+    height: 40px;
 }
 
 .file__input {
@@ -246,27 +314,92 @@ textarea.form__input-massage {
     cursor: pointer;
 }
 
-.file__button {
-    color: #FFFFFF;
-    display: inline-flex;
-    flex: 0 0 28px;
+.file__button-plus {
+    display: flex;
+    width: 28px;
     height: 28px;
     border-radius: 50%;
     justify-content: center;
     background-color: #000000;
-    padding: 13px 18px 2px 16px;
+    padding: 6px;
 }
 
 .file__preview {
-    display: inline-block;
-    max-width: 100px;
-    padding: 10px 0px 0px 0px;
+    display: none;
+    width: 100%;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: -100px;
+    top: 20px;
+    z-index: 10;
+
+    @media(max-width: $tablet-bp-max) {
+        left: 0px;
+        top: 20px;
+    }
 }
 
 .file__preview img {
-    max-width: 100%;
+    // width: 100%;
+    max-width: 100px;
+    max-height: 150px;
+    border: 1px solid $black;
+    // display: none;
 }
 
+.file__item:hover .file__preview {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+// .file__button-plus:hover .file__preview {
+//     display: inline-block;
+// }
+// .file {
+//     display: flex;
+//     gap: 7.5px;
+// }
+// .file__item {
+//     position: relative;
+// }
+// .file__input {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     opacity: 0;
+//     font-size: 0;
+//     cursor: pointer;
+// }
+// .file__button-plus {
+//     // display: none;
+//     display: flex;
+//     width: 28px;
+//     height: 28px;
+//     border-radius: 50%;
+//     justify-content: center;
+//     background-color: #000000;
+//     padding: 6px;
+// }
+// // .file__button-minus {
+// //     display: flex;
+// //     display: none;
+// //     width: 28px;
+// //     height: 28px;
+// //     border-radius: 50%;
+// //     justify-content: center;
+// //     background-color: #000000;
+// //     padding: 6px;
+// // }
+// .file__preview {
+//     display: inline-block;
+//     max-width: 100px;
+// }
+// .file__preview img {
+//     max-width: 100%;
+//     // display: none;
+// }
 .form__button {
     width: 100%;
     height: 45px;

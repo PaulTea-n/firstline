@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Arial Narrow";
   src: url("../fonts/arialnarrow.ttf");
@@ -1063,6 +1064,18 @@ body {
   margin-top: 63px;
   display: flex;
   background-color: #FFFFFF;
+  border-bottom: 1px solid #151515;
+  border-top: 1px solid #151515;
+}
+@media (max-width: 980px) {
+  .form-page {
+    border: none;
+  }
+}
+@media (max-width: 480px) {
+  .form-page {
+    border-top: 1px solid #151515;
+  }
 }
 
 .form-container {
@@ -1071,6 +1084,7 @@ body {
 @media (max-width: 980px) {
   .form-container {
     flex-direction: column;
+    width: 100%;
   }
 }
 
@@ -1083,9 +1097,36 @@ body {
     width: 100%;
   }
 }
+@media (max-width: 480px) {
+  .left-block_form {
+    border-bottom: 1px solid #151515;
+  }
+}
+
+.form-img_block {
+  display: flex;
+  margin-top: 120px;
+}
+@media (min-width: 1520px) {
+  .form-img_block {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 980px) {
+  .form-img_block {
+    margin-top: 0px;
+  }
+}
 
 .right-block_form {
   grid-area: 2/2/3/3;
+  width: 50vw;
+  border-left: 1px solid #151515;
+}
+@media (max-width: 980px) {
+  .right-block_form {
+    width: 100%;
+  }
 }
 
 .wrapper-form {
@@ -1107,6 +1148,31 @@ body {
      object-position: center;
   /* min-height: -webkit-fill-available; */
   height: 100%;
+}
+@media (max-width: 980px) {
+  .form-img {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .form-img {
+    display: block;
+  }
+}
+
+.form-img_tab {
+  display: none;
+}
+@media (max-width: 980px) {
+  .form-img_tab {
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .form-img_tab {
+    display: none;
+  }
 }
 
 .text-form_top {
@@ -1207,6 +1273,16 @@ body {
   transition: all 0.5s ease 0s;
 }
 
+.form__input::-moz-placeholder {
+  color: #CDCDCD;
+  /* Колір тексту плейсхолдера */
+}
+
+.form__input::placeholder {
+  color: #CDCDCD;
+  /* Колір тексту плейсхолдера */
+}
+
 .form__input-massage {
   border: 1px solid #151515;
   width: calc(100% - 30px);
@@ -1219,6 +1295,16 @@ body {
   color: #151515;
   background-color: #FFFFFF;
   transition: all 0.5s ease 0s;
+}
+
+.form__input-massage::-moz-placeholder {
+  color: #CDCDCD;
+  /* Колір тексту плейсхолдера */
+}
+
+.form__input-massage::placeholder {
+  color: #CDCDCD;
+  /* Колір тексту плейсхолдера */
 }
 
 textarea.form__input-massage {
@@ -1251,10 +1337,13 @@ textarea.form__input-massage {
 
 .file {
   display: flex;
+  gap: 15px;
 }
 
 .file__item {
   position: relative;
+  transition: all 0.3s ease;
+  height: 40px;
 }
 
 .file__input {
@@ -1268,25 +1357,41 @@ textarea.form__input-massage {
   cursor: pointer;
 }
 
-.file__button {
-  color: #FFFFFF;
-  display: inline-flex;
-  flex: 0 0 28px;
+.file__button-plus {
+  display: flex;
+  width: 28px;
   height: 28px;
   border-radius: 50%;
   justify-content: center;
   background-color: #000000;
-  padding: 13px 18px 2px 16px;
+  padding: 6px;
 }
 
 .file__preview {
-  display: inline-block;
-  max-width: 100px;
-  padding: 10px 0px 0px 0px;
+  display: none;
+  width: 100%;
+  transition: all 0.3s ease;
+  position: absolute;
+  left: -100px;
+  top: 20px;
+  z-index: 10;
+}
+@media (max-width: 980px) {
+  .file__preview {
+    left: 0px;
+    top: 20px;
+  }
 }
 
 .file__preview img {
-  max-width: 100%;
+  max-width: 100px;
+  max-height: 150px;
+  border: 1px solid #151515;
+}
+
+.file__item:hover .file__preview {
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .form__button {
