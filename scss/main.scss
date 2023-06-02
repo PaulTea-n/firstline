@@ -45,6 +45,13 @@ a {
 
 body {
     overflow-x: hidden;
+    -webkit-text-size-adjust: none;
+}
+
+input[type=text],
+input[type=submit],
+textarea {
+    -webkit-appearance: none;
 }
 
 @import 'header.scss';

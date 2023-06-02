@@ -1,5 +1,6 @@
 // --------------form------------
 .form-page {
+    overflow-x: hidden;
     margin-top: 64px;
     display: flex;
     background-color: $white;
@@ -186,6 +187,7 @@
 }
 
 .form__input {
+    -webkit-appearance: none;
     border: none;
     border-bottom: 1px solid $black;
     width: 100%;

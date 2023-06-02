@@ -1,5 +1,6 @@
 // ==================model page================
 .model-page {
+    overflow-x: hidden;
     margin: 63px 0px 0px;
     border-bottom: 1px solid $black;
     overflow-x: hidden;
@@ -115,6 +116,8 @@
     min-width: 268px;
     height: 820px;
     overflow: scroll;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
     cursor: pointer;
