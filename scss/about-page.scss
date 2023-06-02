@@ -1,8 +1,12 @@
 /* ===========about========= */
 
+body {
+    overflow-x: hidden;
+}
+
 .about {
     margin-top: 63px;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 // .about-line {
@@ -380,12 +384,12 @@
         @media(max-width: $mobile-bp) {
             display: block;
             position: absolute;
-            bottom: 0;
+            bottom: -3px;
             left: 0;
             right: 0;
             z-index: 1;
             width: 100%;
-            margin-bottom: -3px;
+            // margin-bottom: -3px;
         }
     }
 }
