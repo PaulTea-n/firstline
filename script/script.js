@@ -208,14 +208,14 @@ var newImages = {
     "./img/kyiv/models2.5.jpg",
   ],
   product3: [
-    "./img/kyiv/models1.1.jpg",
-    "./img/kyiv/models1.2.jpg",
-    "./img/kyiv/models1.3.jpg",
+    "./img/kyiv/models3.1.jpg",
+    "./img/kyiv/models3.2.jpg",
+    "./img/kyiv/models3.3.jpg",
   ],
   product4: [
-    "./img/kyiv/models2.4.jpg",
-    "./img/kyiv/models2.6.jpg",
-    "./img/kyiv/models2.5.jpg",
+    "./img/kyiv/models4.1.jpg",
+    "./img/kyiv/models4.2.jpg",
+    "./img/kyiv/models4.3.jpg",
   ],
 };
 
