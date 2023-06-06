@@ -1,0 +1,95 @@
+// ===============bag=================
+.shop {
+    margin-top: 63px;
+}
+
+.shop-container {
+    border-top: 1px solid black;
+}
+
+.shop-row4 {
+    display: flex;
+
+    // border-top: 1px solid black;
+    // @media(max-width: $mobile-bp) {
+    //     display: flex;
+    //     flex-wrap: wrap;
+    // }
+    @media(max-width: $mobile-bp) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 1px;
+        // grid-row-gap: 0px;
+    }
+}
+
+.shop-card {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    // border-right: 1px solid black;
+    // border-bottom: 1px solid black;
+    // @media(max-width: $mobile-bp) {
+    //     width: 50%;
+    // }
+}
+
+.shop-preview {
+    width: 100%;
+}
+
+.podloga {
+    position: absolute;
+    z-index: 1;
+    bottom: 4px;
+    left: 4%;
+    right: 4%;
+    padding: 10px 0px;
+    text-align: center;
+    // background: linear-gradient(133.7deg, rgba(255, 255, 255, 0.44) -20.68%, rgba(255, 255, 255, 0.33) 119.09%);
+    // filter: blur(15px);
+    backdrop-filter: blur(1px);
+    border-radius: 60px;
+    box-sizing: border-box;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 70%), linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 0%);
+    // background: radial-gradient(circle, rgba(255, 255, 255, 0.44) -20.7%, rgba(255, 255, 255, 0.33) 120%);
+}
+
+.shop-information {
+    color: $black;
+    font-family: 'MS Mincho';
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 100%;
+
+    @media(max-width: $tablet-bp-max) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    @media(max-width: $mobile-bp) {
+        font-size: 20px;
+    }
+}
+
+.name-product {
+    @media(max-width: $tablet-bp-max) {
+        margin: 4px 0px 0px;
+    }
+}
+
+.price {
+    font-family: 'Arial Narrow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+
+    @media(max-width: $tablet-bp-max) {
+        font-size: 14px;
+    }
+}

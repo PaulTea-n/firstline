@@ -166,3 +166,112 @@ window.addEventListener("scroll", function () {
 });
 
 // ----------------------------------------------
+
+// var images = document.querySelectorAll(".product-image");
+
+// // Додаємо обробник події для кожного зображення
+// images.forEach(function (image) {
+//   image.addEventListener("mouseover", function () {
+//     // Отримуємо атрибут data-product поточного зображення
+//     var currentProduct = this.getAttribute("data-product");
+
+//     // Змінюємо зображення для всіх інших, які не мають такий самий data-product значення
+//     images.forEach(function (otherImage) {
+//       if (
+//         otherImage !== image &&
+//         otherImage.getAttribute("data-product1") !== currentProduct
+//       ) {
+//         otherImage.src = "./img/kyiv/models1.1.jpg"; // Змінюємо шлях до нового зображення
+//       }
+//     });
+//   });
+// });
+
+var images = document.querySelectorAll(".product-image");
+var initialImages = [];
+
+// Зберігаємо початкові зображення
+images.forEach(function (image) {
+  initialImages.push(image.getAttribute("src"));
+});
+
+// Об'єкт зі шляхами до нових зображень для кожного об'єкта
+var newImages = {
+  product1: [
+    "./img/kyiv/models1.1.jpg",
+    "./img/kyiv/models1.2.jpg",
+    "./img/kyiv/models1.3.jpg",
+  ],
+  product2: [
+    "./img/kyiv/models2.1.jpg",
+    "./img/kyiv/models2.3.jpg",
+    "./img/kyiv/models2.5.jpg",
+  ],
+  product3: [
+    "./img/kyiv/models1.1.jpg",
+    "./img/kyiv/models1.2.jpg",
+    "./img/kyiv/models1.3.jpg",
+  ],
+  product4: [
+    "./img/kyiv/models2.4.jpg",
+    "./img/kyiv/models2.6.jpg",
+    "./img/kyiv/models2.5.jpg",
+  ],
+};
+
+// Додаємо обробник події для кожного зображення
+images.forEach(function (image, index) {
+  image.addEventListener("mouseover", function () {
+    // Отримуємо атрибут data-product поточного зображення
+    var currentProduct = this.getAttribute("data-product");
+
+    // Змінюємо зображення для всіх інших, які не мають такий самий data-product значення
+    images.forEach(function (otherImage, otherIndex) {
+      if (
+        otherIndex !== index &&
+        otherImage.getAttribute("data-product") !== currentProduct
+      ) {
+        var newProductImages = newImages[currentProduct];
+        if (newProductImages && newProductImages.length === 3) {
+          var newIndex = otherIndex - (otherIndex > index ? 1 : 0);
+          otherImage.src = newProductImages[newIndex % 3]; // Змінюємо шлях до нового зображення
+          otherImage.classList.add("new-photo"); // Додаємо клас для стилізації нових фото
+        }
+      }
+    });
+  });
+
+  image.addEventListener("mouseout", function () {
+    // Повертаємо зображення до початкових значень
+    images.forEach(function (otherImage, otherIndex) {
+      otherImage.src = initialImages[otherIndex];
+      otherImage.classList.remove("new-photo"); // Видаляємо клас, щоб скасувати стилі нових фото
+    });
+  });
+});
+// -----------------------------------
+var productCards = document.querySelectorAll(".product-card");
+
+productCards.forEach(function (card) {
+  var productImage = card.querySelector(".product-image");
+  var podloga = card.querySelector(".podloga");
+
+  card.addEventListener("mouseover", function () {
+    // Змінюємо видимість .podloga на всіх .product-card елементах
+    productCards.forEach(function (card) {
+      var podloga = card.querySelector(".podloga");
+      podloga.classList.add("hidden");
+    });
+
+    // Показуємо .podloga тільки на поточному .product-card елементі
+    podloga.classList.remove("hidden");
+  });
+
+  card.addEventListener("mouseout", function () {
+    // Відновлюємо видимість .podloga на всіх .product-card елементах
+    productCards.forEach(function (card) {
+      var podloga = card.querySelector(".podloga");
+      podloga.classList.remove("hidden");
+    });
+  });
+});

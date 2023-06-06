@@ -1,1 +1,78 @@
 // ==========kyiv==============
+.kyiv {
+    margin-top: 63px;
+}
+
+.product-card {
+    position: relative;
+    width: 100%;
+    // min-height: 700px;
+    height: fit-content;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    // @media(max-width: $mobile-bp) {
+    //     width: 50%;
+    // }
+}
+
+.product {
+    position: relative;
+    z-index: 1;
+}
+
+.product-information {
+    color: $black;
+    font-family: 'MS Mincho';
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    // grid-column-gap: 20px;
+    // grid-row-gap: 10px;
+    @media(max-width: $tablet-bp-max) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media(max-width: $mobile-bp) {
+        font-size: 20px;
+    }
+}
+
+.product-card:hover .product-text {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.product-card:hover .product-image {
+    z-index: 2;
+}
+
+.product-card:hover .product-image img {
+    opacity: 0.5;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-card .podloga {
+    display: block;
+}
+
+.product-card .podloga.hidden {
+    display: none;
+}
+
+.new-photo {
+    min-width: 70px;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: fit-content;
+}
