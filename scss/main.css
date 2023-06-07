@@ -1076,6 +1076,17 @@ body {
   margin-top: 63px;
 }
 
+.city-row4 {
+  display: flex;
+}
+@media (max-width: 480px) {
+  .city-row4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1px;
+  }
+}
+
 .product-card {
   position: relative;
   width: 100%;
@@ -1083,6 +1094,11 @@ body {
   height: fit-content;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
+}
+
+.models-page_link {
+  width: 535px;
+  height: 700px;
 }
 
 .product {

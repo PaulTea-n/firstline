@@ -3,6 +3,23 @@
     margin-top: 63px;
 }
 
+.city-row4 {
+    display: flex;
+
+    // border-top: 1px solid black;
+    // @media(max-width: $mobile-bp) {
+    //     display: flex;
+    //     flex-wrap: wrap;
+    // }
+    @media(max-width: $mobile-bp) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 1px;
+        // grid-row-gap: 0px;
+    }
+}
+
 .product-card {
     position: relative;
     width: 100%;
@@ -13,6 +30,11 @@
     // @media(max-width: $mobile-bp) {
     //     width: 50%;
     // }
+}
+
+.models-page_link {
+    width: 535px;
+    height: 700px;
 }
 
 .product {
