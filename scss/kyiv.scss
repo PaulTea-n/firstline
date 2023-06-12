@@ -94,9 +94,12 @@
 .new-photo {
     // min-width: 70px;
     // max-height: 100%;
+    width: 100%;
+    /* Доданий атрибут ширини */
+    height: auto;
     object-fit: cover;
     object-position: center;
-    height: fit-content;
+    flex-basis: 100%;
 }
 
 // ------------------------

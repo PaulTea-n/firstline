@@ -283,7 +283,7 @@ textarea {
   flex-direction: column;
   position: relative;
   /* Замість flex-grow: 1 */
-  flex-basis: 100%;
+  flex-grow: 1;
   max-width: 100%;
   min-width: 100px;
   /* Замість min-width: 100px */
@@ -1161,12 +1161,14 @@ textarea {
 }
 
 .new-photo {
+  width: 100%;
+  /* Доданий атрибут ширини */
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  height: -moz-fit-content;
-  height: fit-content;
+  flex-basis: 100%;
 }
 
 .swiper {
