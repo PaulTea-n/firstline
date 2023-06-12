@@ -268,9 +268,12 @@ textarea {
 }
 
 /* ===========about========= */
+body {
+  overflow-x: hidden;
+}
+
 .about {
   margin-top: 63px;
-  overflow-x: hidden;
 }
 
 .about-block_container {
@@ -1050,7 +1053,7 @@ textarea {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #407846;
+  background: #3faed6;
 }
 
 .parameters-color_hair {
@@ -1058,7 +1061,7 @@ textarea {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #3F4249;
+  background: rgba(144, 134, 68, 0.9960784314);
 }
 
 .models-page_container {
@@ -1776,95 +1779,6 @@ textarea.form__input-massage {
 .models-scrol_img {
   width: 535px;
   margin-bottom: 60px;
-}
-
-.inform-parameters-model {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (max-width: 980px) {
-  .inform-parameters-model {
-    order: 3;
-    margin-bottom: 100px;
-  }
-}
-
-.my-parameters_list {
-  display: flex;
-  gap: 25px;
-  flex-direction: row;
-  font-family: "TT Norms Pro";
-  font-size: 16px;
-  text-transform: uppercase;
-  color: #151515;
-  justify-content: center;
-}
-
-.parameters-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.value-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.my-value {
-  display: flex;
-}
-
-.my-params-item_model {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #000000;
-  border-radius: 50%;
-  padding: 5px 3px 0px 3px;
-  text-align: center;
-}
-
-.my-parameters_item {
-  margin-bottom: 22px;
-}
-
-.my-parameters_value {
-  margin: 0px 0px 14px;
-}
-
-.parameters-color_eyes {
-  margin-top: -4px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #407846;
-}
-
-.parameters-color_hair {
-  margin-top: -8px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #3F4249;
-}
-
-.models-page_container {
-  display: flex;
-}
-@media (max-width: 480px) {
-  .models-page_container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .block-none_mob {
-    display: none;
-  }
 }
 
 .bag {
