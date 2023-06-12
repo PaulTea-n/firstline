@@ -387,12 +387,61 @@ const swiper = new Swiper('.swiper', {
 });
 
 // ------------------------
-window.addEventListener('load', function() {
-    // Отримуємо посилання на фото з картки товару
-    var productImage = document.querySelector('.product-card .product-image');
+// window.addEventListener('load', function() {
+//     // Отримуємо посилання на фото з картки товару
+//     var productImage = document.querySelector('.product-card .product-image');
 
-    // Додаємо обробник події для кліку на фото
-    productImage.addEventListener('click', function() {
+//     // Додаємо обробник події для кліку на фото
+//     productImage.addEventListener('click', function() {
+//         // Показуємо слайдеровий контейнер та перекриваючий шар
+//         var sliderContainer = document.querySelector('.slider-container');
+//         var overlay = document.querySelector('.overlay');
+//         sliderContainer.style.display = 'block';
+//         overlay.style.display = 'block';
+
+//         // Ініціалізуємо Swiper
+//         var swiper = new Swiper('.swiper-container', {
+//             // Налаштування Swiper
+//             // Додайте будь-які налаштування, які вам потрібні
+//             // Див. документацію Swiper для повного списку налаштувань: https://swiperjs.com/api/
+//             navigation: {
+//                 nextEl: '.swiper-button-next',
+//                 prevEl: '.swiper-button-prev',
+//             },
+//             pagination: {
+//                 el: '.swiper-pagination',
+//                 clickable: true,
+//             },
+//             scrollbar: {
+//                 el: '.swiper-scrollbar',
+//             },
+//             hiddenClass: null, // Показувати стрілки для свайпу відразу
+//         });
+
+//         // Додаємо обробник події для закриття слайдера
+//         var closeButton = document.querySelector('.close-button');
+//         closeButton.addEventListener('click', function() {
+//             // Ховаємо слайдеровий контейнер та перекриваючий шар
+//             sliderContainer.style.display = 'none';
+//             overlay.style.display = 'none';
+
+//             // Знищуємо Swiper
+//             swiper.destroy(true, true);
+//         });
+//     });
+// });
+
+// =========================slider=================================
+
+// Отримуємо посилання на фото з картки товару
+var productImage = document.querySelector('.product-card .product-image');
+
+// Додаємо обробник події для кліку на фото
+productImage.addEventListener('click', function() {
+    var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+    // Перевіряємо ширину екрану
+    if (windowWidth <= 480) {
         // Показуємо слайдеровий контейнер та перекриваючий шар
         var sliderContainer = document.querySelector('.slider-container');
         var overlay = document.querySelector('.overlay');
@@ -428,5 +477,5 @@ window.addEventListener('load', function() {
             // Знищуємо Swiper
             swiper.destroy(true, true);
         });
-    });
+    }
 });
