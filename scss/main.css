@@ -1156,8 +1156,6 @@ body {
 }
 
 .new-photo {
-  min-width: 70px;
-  max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1185,7 +1183,6 @@ body {
 }
 
 .custom-pagination .swiper-pagination-bullet-active {
-  /* Стилізуйте активний булет пагінації */
   background-color: #151515;
 }
 
