@@ -283,7 +283,9 @@ textarea {
   flex-direction: column;
   position: relative;
   /* Замість flex-grow: 1 */
+  flex-basis: 100%;
   max-width: 100%;
+  min-width: 100px;
   /* Замість min-width: 100px */
   /* Доданий відступ між блоками */
 }
@@ -296,6 +298,7 @@ textarea {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  flex-basis: 100%;
 }
 
 .one {
