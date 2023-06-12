@@ -1,49 +1,56 @@
 /* ===========about========= */
 
-body {
+// body {
+//     // overflow-x: hidden;
+// }
+.about {
+    margin-top: 63px;
     overflow-x: hidden;
 }
 
-.about {
-    margin-top: 63px;
-    // overflow-x: hidden;
-    // overflow-x: hidden;
-}
-
-// .about-line {
-//     // display: flex;
-//     // flex-direction: column;
-//     @media(max-width: $desk-bp-min) {
-//         // display: none;
-//         // display: flex;
-//         // flex-direction: column;
-//     }
-// }
 .about-block_container {
     display: flex;
+    /* Доданий атрибут для переносу блоків */
 }
 
 .about-img-block {
     display: flex;
     flex-direction: column;
     position: relative;
-    // width: 100%;
-    flex-grow: 1;
-    min-width: 100px;
-    // object-fit: cover;
-    // object-position: center;
-    // @media(max-width: $desk-bp-max) {
-    //     min-width: 100px;
-    // }
+    /* Замість flex-grow: 1 */
+    max-width: 100%;
+    /* Замість min-width: 100px */
+    /* Доданий відступ між блоками */
 }
 
 .about-img {
-    flex: 1;
-    // height: auto;
+    width: 100%;
+    /* Доданий атрибут ширини */
+    height: auto;
     object-fit: cover;
     object-position: center;
 }
 
+// .about {
+//     margin-top: 63px;
+//     overflow-x: hidden;
+// }
+// .about-block_container {
+//     display: flex;
+// }
+// .about-img-block {
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+//     flex-grow: 1;
+//     min-width: 100px;
+// }
+// .about-img {
+//     flex: 1;
+//     // height: auto;
+//     object-fit: cover;
+//     object-position: center;
+// }
 .one {
     margin: -4px -1px 0px -1px;
 
