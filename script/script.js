@@ -383,7 +383,7 @@ const swiper = new Swiper('.swiper', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
-    hiddenClass: null,
+    // hiddenClass: null,
 });
 
 // ------------------------
@@ -433,57 +433,119 @@ const swiper = new Swiper('.swiper', {
 
 // =========================slider=================================
 
-var productImage = document.querySelector('.product-card .product-image');
-var sliderContainer = document.querySelector('.slider-container');
-var overlay = document.querySelector('.overlay');
+// var productImage = document.querySelector('.product-card .product-image');
+// var sliderContainer = document.querySelector('.slider-container');
+// var overlay = document.querySelector('.overlay');
 
-productImage.addEventListener('click', function() {
-    var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+// productImage.addEventListener('click', function() {
+//     var windowWidth = window.innerWidth || document.documentElement.clientWidth;
 
-    if (windowWidth <= 480) {
-        // Заборона прокручування контента
-        document.body.style.overflow = 'hidden';
-        document.documentElement.style.overflow = 'hidden';
-        document.body.style.position = 'fixed';
-        document.documentElement.style.position = 'fixed';
+//     if (windowWidth <= 480) {
+//         // Заборона прокручування контента
+//         document.body.style.overflow = 'hidden';
+//         document.documentElement.style.overflow = 'hidden';
+//         document.body.style.position = 'fixed';
+//         document.documentElement.style.position = 'fixed';
 
-        // Показуємо слайдеровий контейнер та перекриваючий шар
-        sliderContainer.style.display = 'block';
-        overlay.style.display = 'block';
+//         // Показуємо слайдеровий контейнер та перекриваючий шар
+//         sliderContainer.style.display = 'block';
+//         overlay.style.display = 'block';
 
-        // Ініціалізуємо Swiper
-        var swiper = new Swiper('.swiper-container', {
-            // Налаштування Swiper
-            // Додайте будь-які налаштування, які вам потрібні
-            // Див. документацію Swiper для повного списку налаштувань: https://swiperjs.com/api/
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-            hiddenClass: null, // Показувати стрілки для свайпу відразу
-        });
+//         // Ініціалізуємо Swiper
+//         var swiper = new Swiper('.swiper-container', {
+//             // Налаштування Swiper
+//             // Додайте будь-які налаштування, які вам потрібні
+//             // Див. документацію Swiper для повного списку налаштувань: https://swiperjs.com/api/
+//             navigation: {
+//                 nextEl: '.swiper-button-next',
+//                 prevEl: '.swiper-button-prev',
+//             },
+//             pagination: {
+//                 el: '.swiper-pagination',
+//                 clickable: true,
+//             },
+//             scrollbar: {
+//                 el: '.swiper-scrollbar',
+//             },
+//             hiddenClass: null, // Показувати стрілки для свайпу відразу
+//         });
 
-        var closeButton = document.querySelector('.close-button');
-        closeButton.addEventListener('click', function() {
-            // Відновлення прокрутки контента
-            document.body.style.overflow = '';
-            document.documentElement.style.overflow = '';
-            document.body.style.position = '';
-            document.documentElement.style.position = '';
+//         var closeButton = document.querySelector('.close-button');
+//         closeButton.addEventListener('click', function() {
+//             // Відновлення прокрутки контента
+//             document.body.style.overflow = '';
+//             document.documentElement.style.overflow = '';
+//             document.body.style.position = '';
+//             document.documentElement.style.position = '';
 
-            // Ховаємо слайдеровий контейнер та перекриваючий шар
-            sliderContainer.style.display = 'none';
-            overlay.style.display = 'none';
+//             // Ховаємо слайдеровий контейнер та перекриваючий шар
+//             sliderContainer.style.display = 'none';
+//             overlay.style.display = 'none';
 
-            // Знищуємо Swiper
-            swiper.destroy(true, true);
-        });
-    }
+//             // Знищуємо Swiper
+//             swiper.destroy(true, true);
+//         });
+//     }
+// });
+
+
+// / Отримуємо всі карти товарів на сторінці
+var productCards = document.querySelectorAll('.product-card');
+
+// Проходимося по кожній картці товару і створюємо слайдер
+productCards.forEach(function(productCard) {
+    var productImage = productCard.querySelector('.product-image');
+    var sliderContainer = productCard.querySelector('.slider-container');
+    var overlay = productCard.querySelector('.overlay');
+
+    productImage.addEventListener('click', function() {
+        var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+        if (windowWidth <= 480) {
+            // Заборона прокручування контента
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.documentElement.style.position = 'fixed';
+
+            // Показуємо слайдеровий контейнер та перекриваючий шар
+            sliderContainer.style.display = 'block';
+            overlay.style.display = 'block';
+
+            // Ініціалізуємо Swiper
+            var swiper = new Swiper(productCard.querySelector('.swiper-container'), {
+                // Налаштування Swiper
+                // Додайте будь-які налаштування, які вам потрібні
+                // Див. документацію Swiper для повного списку налаштувань: https://swiperjs.com/api/
+                // navigation: {
+                //     nextEl: productCard.querySelector('.swiper-button-next'),
+                //     prevEl: productCard.querySelector('.swiper-button-prev'),
+                // },
+                pagination: {
+                    el: productCard.querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
+                scrollbar: {
+                    el: productCard.querySelector('.swiper-scrollbar'),
+                },
+                // hiddenClass: null, // Показувати стрілки для свайпу відразу
+            });
+
+            var closeButton = productCard.querySelector('.close-button');
+            closeButton.addEventListener('click', function() {
+                // Відновлення прокрутки контента
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+                document.body.style.position = '';
+                document.documentElement.style.position = '';
+
+                // Ховаємо слайдеровий контейнер та перекриваючий шар
+                sliderContainer.style.display = 'none';
+                overlay.style.display = 'none';
+
+                // Знищуємо Swiper
+                swiper.destroy(true, true);
+            });
+        }
+    });
 });
