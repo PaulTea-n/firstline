@@ -4,6 +4,8 @@
     padding: 20px;
     font-family: 'Arial Narrow';
     font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.02em;
     justify-content: space-between;
     align-items: center;
     max-width: 100%;
@@ -20,36 +22,31 @@
     }
 }
 
-// .logo {
-//     font-size: 24px;
-//     font-weight: bold;
-//     font-family: 'RealMadrid2009';
-// }
 .nav-left {
     display: flex;
-    gap: 85px;
+    gap: 40px;
     align-items: center;
 
     @media(max-width: $desk-bp-min) {
-        gap: 60px;
+        gap: 40px;
     }
 }
 
 .nav-centr {
     display: flex;
-    gap: 85px;
+    gap: 40px;
 
     @media(max-width: $desk-bp-min) {
-        gap: 60px;
+        gap: 40px;
     }
 }
 
 .nav-right {
     display: flex;
-    gap: 85px;
+    gap: 40px;
 
     @media(max-width: $desk-bp-min) {
-        gap: 60px;
+        gap: 40px;
     }
 }
 

@@ -44,6 +44,8 @@ textarea {
   padding: 20px;
   font-family: "Arial Narrow";
   font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.02em;
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
@@ -62,32 +64,32 @@ textarea {
 
 .nav-left {
   display: flex;
-  gap: 85px;
+  gap: 40px;
   align-items: center;
 }
 @media (max-width: 1520px) {
   .nav-left {
-    gap: 60px;
+    gap: 40px;
   }
 }
 
 .nav-centr {
   display: flex;
-  gap: 85px;
+  gap: 40px;
 }
 @media (max-width: 1520px) {
   .nav-centr {
-    gap: 60px;
+    gap: 40px;
   }
 }
 
 .nav-right {
   display: flex;
-  gap: 85px;
+  gap: 40px;
 }
 @media (max-width: 1520px) {
   .nav-right {
-    gap: 60px;
+    gap: 40px;
   }
 }
 
@@ -273,7 +275,7 @@ body {
 }
 
 .about {
-  margin-top: 63px;
+  margin-top: 65px;
 }
 
 .about-block_container {
@@ -675,7 +677,7 @@ body {
 }
 
 .models {
-  margin-top: 63px;
+  margin-top: 65px;
   overflow-x: hidden;
 }
 
@@ -854,7 +856,7 @@ body {
 
 .model-page {
   overflow-x: hidden;
-  margin: 63px 0px 0px;
+  margin: 65px 0px 0px;
   border-bottom: 1px solid #151515;
 }
 
@@ -1081,7 +1083,7 @@ body {
 }
 
 .kyiv {
-  margin-top: 63px;
+  margin-top: 65px;
 }
 
 .city-row4 {
@@ -1235,7 +1237,7 @@ body {
 
 .form-page {
   overflow-x: hidden;
-  margin-top: 64px;
+  margin-top: 65px;
   display: flex;
   background-color: #FFFFFF;
   border-bottom: 1px solid #151515;
@@ -1591,7 +1593,7 @@ textarea.form__input-massage {
 }
 
 .shop {
-  margin-top: 63px;
+  margin-top: 65px;
 }
 
 .shop-container {
@@ -1682,7 +1684,7 @@ textarea.form__input-massage {
 
 .shop-page {
   overflow-x: hidden;
-  margin: 63px 0px 0px;
+  margin: 65px 0px 0px;
   border-bottom: 1px solid #151515;
 }
 
@@ -1746,8 +1748,20 @@ textarea.form__input-massage {
   margin-right: 10px;
 }
 
-.select {
-  margin-top: 40px;
+.row-product {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 25px;
+  grid-row-gap: 30px;
+  margin-bottom: 40px;
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #151515;
+}
+
+.item-product {
+  justify-self: end;
 }
 
 .model-page_photo {
@@ -1781,13 +1795,46 @@ textarea.form__input-massage {
   margin-bottom: 60px;
 }
 
+.shop-btn {
+  width: 324px;
+  height: 45px;
+  color: #FFFFFF;
+  background-color: #151515;
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.shop-text_button {
+  margin: 60px 0px 40px 20px;
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+  color: #151515;
+}
+
+.inform-parameters-product {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 980px) {
+  .inform-parameters-product {
+    order: 3;
+    margin-bottom: 100px;
+  }
+}
+
 .bag {
-  margin-top: 63px;
+  margin-top: 65px;
 }
 
 /* ===========contact====== */
 .contact {
-  margin-top: 63px;
+  margin-top: 65px;
   overflow-x: hidden;
 }
 
@@ -1796,6 +1843,13 @@ textarea.form__input-massage {
   flex-direction: row;
   border-top: 1px solid #151515;
   border-bottom: 1px solid #151515;
+}
+@media (max-width: 1024px) {
+  .contact-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 @media (max-width: 980px) {
   .contact-container {
@@ -1851,6 +1905,11 @@ textarea.form__input-massage {
   border-right: 1px solid #000000;
   transition: all 0.5s ease;
 }
+@media (max-width: 1024px) {
+  .block2 {
+    left: 1px;
+  }
+}
 @media (max-width: 480px) {
   .block2 {
     border-top: 1px solid #000000;
@@ -1869,7 +1928,7 @@ textarea.form__input-massage {
   border-right: 1px solid #000000;
   transition: all 0.5s ease;
 }
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
   .block3 {
     border-top: 1px solid #000000;
   }
@@ -1886,8 +1945,9 @@ textarea.form__input-massage {
   background-color: #ECF0FF;
   transition: all 0.5s ease;
 }
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
   .block4 {
+    left: 1px;
     border-top: 1px solid #000000;
   }
 }

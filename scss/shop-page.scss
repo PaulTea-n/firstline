@@ -1,7 +1,7 @@
 // ==================model page================
 .shop-page {
     overflow-x: hidden;
-    margin: 63px 0px 0px;
+    margin: 65px 0px 0px;
     border-bottom: 1px solid $black;
 }
 
@@ -56,8 +56,6 @@
     margin-bottom: 26px;
 }
 
-.variant {}
-
 .variant-color {
     display: flex;
 }
@@ -66,8 +64,20 @@
     margin-right: 10px;
 }
 
-.select {
-    margin-top: 40px;
+.row-product {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 25px;
+    grid-row-gap: 30px;
+    margin-bottom: 40px;
+    font-family: 'TT Norms Pro';
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $black;
+}
+
+.item-product {
+    justify-self: end;
 }
 
 // -----------------------
@@ -108,16 +118,38 @@
 }
 
 // -------------------
-// .inform-parameters-model {
-//     flex: 1;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     @media(max-width: $tablet-bp-max) {
-//         order: 3;
-//         margin-bottom: 100px;
-//     }
-// }
+.shop-btn {
+    width: 324px;
+    height: 45px;
+    color: $white;
+    background-color: $black;
+    font-family: 'TT Norms Pro';
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.shop-text_button {
+    margin: 60px 0px 40px 20px;
+    font-family: 'TT Norms Pro';
+    font-size: 16px;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    color: $black;
+}
+
+.inform-parameters-product {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media(max-width: $tablet-bp-max) {
+        order: 3;
+        margin-bottom: 100px;
+    }
+}
+
 // .my-parameters_list {
 //     display: flex;
 //     gap: 25px;

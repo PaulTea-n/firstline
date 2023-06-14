@@ -1,7 +1,7 @@
 /* ===========contact====== */
 
 .contact {
-    margin-top: 63px;
+    margin-top: 65px;
     overflow-x: hidden;
 }
 
@@ -10,6 +10,13 @@
     flex-direction: row;
     border-top: 1px solid $black;
     border-bottom: 1px solid $black;
+
+    @media(max-width: $tablet-1024) {
+        // border-top: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
 
     @media(max-width: $tablet-bp-max) {
         // border-top: none;
@@ -71,6 +78,10 @@
     border-right: 1px solid #000000;
     transition: all 0.5s ease;
 
+    @media(max-width: $tablet-1024) {
+        left: 1px;
+    }
+
     @media(max-width: $mobile-bp) {
         border-top: 1px solid #000000;
     }
@@ -88,7 +99,7 @@
     border-right: 1px solid #000000;
     transition: all 0.5s ease;
 
-    @media(max-width: $tablet-bp-max) {
+    @media(max-width: $tablet-1024) {
         border-top: 1px solid #000000;
     }
 }
@@ -104,7 +115,8 @@
     background-color: #ECF0FF;
     transition: all 0.5s ease;
 
-    @media(max-width: $tablet-bp-max) {
+    @media(max-width: $tablet-1024) {
+        left: 1px;
         border-top: 1px solid #000000;
     }
 }
