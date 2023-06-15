@@ -288,7 +288,7 @@ body {
   flex-direction: column;
   position: relative;
   /* Замість flex-grow: 1 */
-  flex-grow: 1;
+  flex-basis: 100%;
   max-width: 100%;
   min-width: 100px;
   /* Замість min-width: 100px */
@@ -296,7 +296,7 @@ body {
 }
 
 .about-img {
-  width: 100%;
+  width: 101%;
   /* Доданий атрибут ширини */
   height: auto;
   -o-object-fit: cover;
@@ -328,11 +328,22 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 33%;
+  left: 3px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   position: relative;
+}
+@media (min-width: 1520px) {
+  .photo-block {
+    left: 4px;
+  }
+}
+@media (max-width: 980px) {
+  .photo-block {
+    left: 2px;
+  }
 }
 @media (max-width: 480px) {
   .photo-block {
@@ -341,7 +352,7 @@ body {
 }
 
 .shot-img {
-  min-height: 82.05%;
+  min-height: 83.4%;
   position: absolute;
   width: 100%;
   -o-object-fit: cover;
@@ -349,9 +360,14 @@ body {
   -o-object-position: center;
      object-position: center;
 }
+@media (min-width: 1520px) {
+  .shot-img {
+    min-height: 83%;
+  }
+}
 @media (max-width: 980px) {
   .shot-img {
-    min-height: 82.45%;
+    min-height: 83.7%;
   }
 }
 @media (max-width: 480px) {
@@ -403,12 +419,18 @@ body {
   line-height: 100%;
   text-transform: uppercase;
   color: #000000;
-  width: 42%;
+  width: 46%;
   z-index: 1;
   position: absolute;
   height: 31px;
-  left: 21%;
-  top: 68%;
+  left: 10%;
+  top: 74%;
+}
+@media (max-width: 1024px) {
+  .line_three-text {
+    left: 2%;
+    top: 67%;
+  }
 }
 @media (max-width: 980px) {
   .line_three-text {
@@ -437,13 +459,13 @@ body {
   }
   .about-line_three .img2 {
     position: absolute;
-    top: 38px;
+    top: 40px;
     max-width: 257px;
   }
   .about-line_three .img3 {
     position: absolute;
     z-index: 1;
-    top: 59px;
+    top: 40px;
     left: 64px;
     max-width: 193px;
   }
@@ -457,8 +479,13 @@ body {
 }
 
 .photo1 {
-  width: 40%;
-  margin-left: 20px;
+  width: 42%;
+  margin-left: 25px;
+}
+@media (max-width: 1024px) {
+  .photo1 {
+    width: 50%;
+  }
 }
 @media (max-width: 480px) {
   .photo1 {
@@ -468,8 +495,8 @@ body {
 }
 
 .photo2 {
-  margin-left: 63px;
-  margin-top: 73px;
+  margin-left: 25px;
+  margin-top: 80px;
   width: 23%;
 }
 @media (max-width: 480px) {
@@ -482,7 +509,7 @@ body {
 }
 
 .photo3 {
-  margin-top: 88px;
+  margin-top: 80px;
   width: 20%;
 }
 @media (max-width: 480px) {
@@ -621,22 +648,24 @@ body {
 }
 
 .text-block_title {
+  font-family: "Arial Narrow";
+  font-size: 35px;
+  text-transform: uppercase;
   margin: 0 auto;
-  width: 674px;
 }
-@media (max-width: 1520px) {
+@media (max-width: 980px) {
   .text-block_title {
-    width: 462px;
+    font-size: 20px;
   }
 }
 @media (max-width: 480px) {
   .text-block_title {
-    width: 100%;
+    font-size: 18px;
   }
 }
 
 .text-betweenlines-desck {
-  margin: 1px 0px 0px -3px;
+  margin: -2px 0px 0px -3px;
 }
 @media (max-width: 480px) {
   .text-betweenlines-desck {
@@ -711,6 +740,7 @@ body {
 
 .models-preview {
   width: 100%;
+  margin-bottom: -2px;
 }
 
 .video-container {
@@ -897,6 +927,7 @@ body {
   margin: 20px 0px 40px;
   font-family: "Arial Narrow";
   font-size: 14px;
+  line-height: 130%;
   text-align: center;
   text-transform: uppercase;
   color: #151515;
@@ -920,7 +951,7 @@ body {
 .my-social_item {
   color: #151515;
   text-decoration: none;
-  padding: 6px 10px;
+  padding: 4px;
   border: 1px solid #151515;
   border-radius: 40px;
   font-family: "TT Norms Pro";
@@ -1006,27 +1037,20 @@ body {
   }
 }
 
-.my-parameters_list {
-  display: flex;
-  gap: 25px;
-  flex-direction: row;
+.row-models {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+  grid-column-gap: 25px;
+  grid-row-gap: 15px;
   font-family: "TT Norms Pro";
   font-size: 16px;
   text-transform: uppercase;
   color: #151515;
-  justify-content: center;
 }
 
-.parameters-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.value-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.item-models {
+  justify-self: end;
 }
 
 .my-value {
@@ -1042,28 +1066,16 @@ body {
   text-align: center;
 }
 
-.my-parameters_item {
-  margin-bottom: 22px;
-}
-
-.my-parameters_value {
-  margin: 0px 0px 14px;
-}
-
 .parameters-color_eyes {
-  margin-top: -4px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #3faed6;
 }
 
 .parameters-color_hair {
-  margin-top: -8px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: rgba(144, 134, 68, 0.9960784314);
 }
 
 .models-page_container {
@@ -1153,10 +1165,6 @@ body {
   opacity: 0.5;
 }
 
-.product-image {
-  width: 100%;
-}
-
 .product-card .podloga {
   display: block;
 }
@@ -1165,15 +1173,25 @@ body {
   display: none;
 }
 
+.product-image {
+  width: 100%;
+  margin-bottom: -2px;
+}
+
+.product-image.new-photo {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
 .new-photo {
   width: 100%;
-  /* Доданий атрибут ширини */
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   flex-basis: 100%;
+  transition: opacity 0.3s ease;
 }
 
 .swiper {
@@ -1358,6 +1376,7 @@ body {
 
 .form {
   width: 450px;
+  margin-bottom: 100px;
 }
 @media (max-width: 980px) {
   .form {
@@ -1407,7 +1426,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 110%;
+  line-height: 120%;
   letter-spacing: 0.02em;
   color: #151515;
   display: flex;
@@ -1428,7 +1447,7 @@ body {
 }
 
 .form__item {
-  margin: 0px 0px 35px 0px;
+  margin: 0px 0px 25px 0px;
 }
 
 .form__label {

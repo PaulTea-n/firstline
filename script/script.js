@@ -289,6 +289,7 @@ function updateImageHover() {
                                     (otherIndex > index ? 1 : 0);
                                 otherImage.src = newProductImages[newIndex % 3]; // Змінюємо шлях до нового зображення
                                 otherImage.classList.add("new-photo"); // Додаємо клас для стилізації нових фото
+
                             }
                         }
                     });
@@ -299,6 +300,7 @@ function updateImageHover() {
                     images.forEach(function(otherImage, otherIndex) {
                         otherImage.src = initialImages[otherIndex];
                         otherImage.classList.remove("new-photo"); // Видаляємо клас, щоб скасувати стилі нових фото
+
                     });
                 });
             });

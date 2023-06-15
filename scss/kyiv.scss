@@ -79,10 +79,6 @@
     opacity: 0.5;
 }
 
-.product-image {
-    width: 100%;
-}
-
 .product-card .podloga {
     display: block;
 }
@@ -91,15 +87,23 @@
     display: none;
 }
 
-.new-photo {
-    // min-width: 70px;
-    // max-height: 100%;
+.product-image {
     width: 100%;
-    /* Доданий атрибут ширини */
+    margin-bottom: -2px;
+}
+
+.product-image.new-photo {
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.new-photo {
+    width: 100%;
     height: auto;
     object-fit: cover;
     object-position: center;
     flex-basis: 100%;
+    transition: opacity 0.3s ease;
 }
 
 // ------------------------

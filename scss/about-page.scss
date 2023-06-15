@@ -18,8 +18,8 @@ body {
     flex-direction: column;
     position: relative;
     /* Замість flex-grow: 1 */
-    // flex-basis: 100%;
-    flex-grow: 1;
+    flex-basis: 100%;
+    // flex-grow: 1;
     max-width: 100%;
     min-width: 100px;
     /* Замість min-width: 100px */
@@ -27,7 +27,7 @@ body {
 }
 
 .about-img {
-    width: 100%;
+    width: 101%;
     /* Доданий атрибут ширини */
     height: auto;
     object-fit: cover;
@@ -75,9 +75,18 @@ body {
     display: flex;
     flex-direction: column;
     min-width: 33%;
+    left: 3px;
     object-fit: cover;
     object-position: center;
     position: relative;
+
+    @media(min-width: $desk-bp-min) {
+        left: 4px;
+    }
+
+    @media(max-width: $tablet-bp-max) {
+        left: 2px;
+    }
 
     @media(max-width: $mobile-bp) {
         width: 100%;
@@ -85,14 +94,18 @@ body {
 }
 
 .shot-img {
-    min-height: 82.05%;
+    min-height: 83.4%;
     position: absolute;
     width: 100%;
     object-fit: cover;
     object-position: center;
 
+    @media(min-width: $desk-bp-min) {
+        min-height: 83%;
+    }
+
     @media(max-width: $tablet-bp-max) {
-        min-height: 82.45%;
+        min-height: 83.7%;
     }
 
     @media(max-width: $mobile-bp) {
@@ -141,12 +154,17 @@ body {
     line-height: 100%;
     text-transform: uppercase;
     color: #000000;
-    width: 42%;
+    width: 46%;
     z-index: 1;
     position: absolute;
     height: 31px;
-    left: 21%;
-    top: 68%;
+    left: 10%;
+    top: 74%;
+
+    @media(max-width: $tablet-1024) {
+        left: 2%;
+        top: 67%;
+    }
 
     @media(max-width: $tablet-bp-max) {
         font-size: 24px;
@@ -175,14 +193,14 @@ body {
         .img2 {
             position: absolute;
             // z-index: 1;
-            top: 38px;
+            top: 40px;
             max-width: 257px;
         }
 
         .img3 {
             position: absolute;
             z-index: 1;
-            top: 59px;
+            top: 40px;
             left: 64px;
             max-width: 193px;
         }
@@ -196,8 +214,12 @@ body {
 }
 
 .photo1 {
-    width: 40%;
-    margin-left: 20px;
+    width: 42%;
+    margin-left: 25px;
+
+    @media(max-width: $tablet-1024) {
+        width: 50%;
+    }
 
     @media(max-width: $mobile-bp) {
         width: auto;
@@ -206,8 +228,8 @@ body {
 }
 
 .photo2 {
-    margin-left: 63px;
-    margin-top: 73px;
+    margin-left: 25px;
+    margin-top: 80px;
     width: 23%;
 
     @media(max-width: $mobile-bp) {
@@ -219,7 +241,7 @@ body {
 }
 
 .photo3 {
-    margin-top: 88px;
+    margin-top: 80px;
     width: 20%;
 
     @media(max-width: $mobile-bp) {
@@ -355,20 +377,25 @@ body {
 }
 
 .text-block_title {
+    // margin: 0 auto;
+    // width: 674px;
+    font-family: 'Arial Narrow';
+    font-size: 35px;
+    text-transform: uppercase;
     margin: 0 auto;
-    width: 674px;
 
-    @media(max-width: $desk-bp-min) {
-        width: 462px;
+    @media(max-width: $tablet-bp-max) {
+        font-size: 20px;
     }
 
     @media(max-width: $mobile-bp) {
-        width: 100%
+        // width: 100%;
+        font-size: 18px;
     }
 }
 
 .text-betweenlines-desck {
-    margin: 1px 0px 0px -3px;
+    margin: -2px 0px 0px -3px;
 
     @media(max-width: $mobile-bp) {
         display: none;

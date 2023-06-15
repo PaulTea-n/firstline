@@ -108,6 +108,7 @@
 
 .form {
     width: 450px;
+    margin-bottom: 100px;
 
     @media(max-width: $tablet-bp-max) {
         width: 100%;
@@ -158,7 +159,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 110%;
+    line-height: 120%;
     letter-spacing: 0.02em;
     color: $black;
     display: flex;
@@ -179,7 +180,7 @@
 }
 
 .form__item {
-    margin: 0px 0px 35px 0px;
+    margin: 0px 0px 25px 0px;
 }
 
 .form__label {
