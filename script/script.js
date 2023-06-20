@@ -551,3 +551,4 @@ productCards.forEach(function(productCard) {
         }
     });
 });
+// =========================bag===================

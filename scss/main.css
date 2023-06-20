@@ -789,7 +789,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
-@media (max-width: 980px) {
+@media (max-width: 1300px) {
   .models-information {
     display: flex;
     flex-direction: column;
@@ -1840,6 +1840,19 @@ textarea.form__input-massage {
   .inform-parameters-product {
     order: 3;
   }
+}
+
+.select-size {
+  width: 150px;
+  border: none;
+  border-bottom: 1px solid #151515;
+}
+
+.select-size:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: transparent;
+  border-bottom: 1px solid #151515;
 }
 
 .bag {
