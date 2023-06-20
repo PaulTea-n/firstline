@@ -1275,6 +1275,7 @@ body {
 
 .form-container {
   display: flex;
+  width: 100%;
 }
 @media (max-width: 980px) {
   .form-container {
@@ -1286,7 +1287,7 @@ body {
 
 .left-block_form {
   grid-area: 2/1/3/2;
-  width: 50vw;
+  width: 50%;
 }
 @media (max-width: 980px) {
   .left-block_form {
@@ -1316,7 +1317,7 @@ body {
 
 .right-block_form {
   grid-area: 2/2/3/3;
-  width: 50vw;
+  width: 50%;
   border-left: 1px solid #151515;
 }
 @media (max-width: 980px) {
