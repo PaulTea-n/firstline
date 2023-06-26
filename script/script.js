@@ -94,24 +94,48 @@ document.addEventListener("DOMContentLoaded", function() {
         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
     }
 
-    // File preview
+    // // File preview
+    // const formItems = document.querySelectorAll(".file__item");
+
+    // formItems.forEach((formItem, index) => {
+    //     const formImage = formItem.querySelector(".file__input");
+    //     const formPreview = formItem.querySelector(".file__preview");
+    //     const buttonPlus = formItem.querySelector(".file__button-plus img");
+
+    //     //Toggle plus/minus icon
+    //     formImage.addEventListener("change", () => {
+    //         if (formImage.files.length > 0) {
+    //             // Файл було обрано
+    //             uploadFile(formImage.files[0], formPreview);
+    //             buttonPlus.src = "./img/form/minus.svg";
+    //         } else {
+    //             // Файл не було обрано
+    //             formPreview.innerHTML = "";
+    //             buttonPlus.src = "./img/form/plus.svg";
+    //         }
+    //     });
+    // });
+
     const formItems = document.querySelectorAll(".file__item");
 
     formItems.forEach((formItem, index) => {
         const formImage = formItem.querySelector(".file__input");
         const formPreview = formItem.querySelector(".file__preview");
-        const buttonPlus = formItem.querySelector(".file__button-plus img");
+        const buttonPlus = formItem.querySelector(".file__button-plus");
+        const buttonMinus = formItem.querySelector(".file__button-minus");
 
-        //Toggle plus/minus icon
+        // Toggle plus/minus icon
         formImage.addEventListener("change", () => {
             if (formImage.files.length > 0) {
-                // Файл було обрано
+                // File was selected
                 uploadFile(formImage.files[0], formPreview);
-                buttonPlus.src = "./img/form/minus.svg";
+                buttonPlus.style.display = "none";
+                buttonMinus.style.display = "flex";
             } else {
-                // Файл не було обрано
+                // File was not selected
                 formPreview.innerHTML = "";
-                buttonPlus.src = "./img/form/plus.svg";
+                buttonPlus.style.display = "flex";
+                buttonMinus.style.display = "none";
             }
         });
     });
@@ -365,28 +389,9 @@ window.addEventListener("resize", checkScreenWidth);
 
 // =========================slider=================================
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
 
-    loop: true,
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-    hiddenClass: null,
-});
 
 // ------------------------
 // window.addEventListener('load', function() {
@@ -502,6 +507,7 @@ productCards.forEach(function(productCard) {
 
     productImage.addEventListener('click', function() {
         var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+        console.log("swiper");
 
         if (windowWidth <= 480) {
             // Заборона прокручування контента
@@ -515,22 +521,28 @@ productCards.forEach(function(productCard) {
             overlay.style.display = 'block';
 
             // Ініціалізуємо Swiper
-            var swiper = new Swiper(productCard.querySelector('.swiper-container'), {
-                // Налаштування Swiper
-                // Додайте будь-які налаштування, які вам потрібні
-                // Див. документацію Swiper для повного списку налаштувань: https://swiperjs.com/api/
-                // navigation: {
-                //     nextEl: productCard.querySelector('.swiper-button-next'),
-                //     prevEl: productCard.querySelector('.swiper-button-prev'),
-                // },
+            const swiper = new Swiper('.swiper', {
+
+                // Optional parameters
+                loop: true,
+
+                // If we need pagination
                 pagination: {
-                    el: productCard.querySelector('.swiper-pagination'),
+                    el: '.swiper-pagination',
                     clickable: true,
                 },
-                scrollbar: {
-                    el: productCard.querySelector('.swiper-scrollbar'),
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
-                // hiddenClass: null, // Показувати стрілки для свайпу відразу
+
+                // And if we need scrollbar
+                // scrollbar: {
+                //     el: '.swiper-scrollbar',
+                // },
+                hiddenClass: null,
             });
 
             var closeButton = productCard.querySelector('.close-button');

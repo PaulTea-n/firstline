@@ -329,6 +329,16 @@ textarea.form__input-massage {
     padding: 6px;
 }
 
+.file__button-minus {
+    display: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    justify-content: center;
+    background-color: #000000;
+    padding: 6px;
+}
+
 .file__preview {
     display: none;
     width: 100%;

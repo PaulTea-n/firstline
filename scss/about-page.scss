@@ -57,7 +57,6 @@ body {
 // }
 .one {
     margin: -4px -1px 0px -1px;
-
     @media(max-width: $mobile-bp) {
         margin-top: -1px;
     }
@@ -79,17 +78,15 @@ body {
     object-fit: cover;
     object-position: center;
     position: relative;
-
     @media(min-width: $desk-bp-min) {
         left: 4px;
     }
-
     @media(max-width: $tablet-bp-max) {
         left: 2px;
     }
-
     @media(max-width: $mobile-bp) {
         width: 100%;
+        left: 0px;
     }
 }
 
@@ -99,15 +96,12 @@ body {
     width: 100%;
     object-fit: cover;
     object-position: center;
-
     @media(min-width: $desk-bp-min) {
         min-height: 83%;
     }
-
     @media(max-width: $tablet-bp-max) {
         min-height: 83.7%;
     }
-
     @media(max-width: $mobile-bp) {
         position: static;
     }
@@ -120,7 +114,6 @@ body {
     width: 100%;
     object-fit: cover;
     object-position: center;
-
     @media(max-width: $mobile-bp) {
         bottom: -1px;
     }
@@ -128,7 +121,6 @@ body {
 
 .second {
     margin-top: -7px;
-
     @media(max-width: $mobile-bp) {
         margin-top: -4px;
     }
@@ -160,16 +152,13 @@ body {
     height: 31px;
     left: 10%;
     top: 74%;
-
     @media(max-width: $tablet-1024) {
         left: 2%;
         top: 67%;
     }
-
     @media(max-width: $tablet-bp-max) {
         font-size: 24px;
     }
-
     @media(max-width: $mobile-bp) {
         font-size: 24px;
         width: 100%;
@@ -181,7 +170,6 @@ body {
 @media(max-width: $mobile-bp) {
     .about-line_three {
         position: relative;
-
         // height: 100vh;
         .img1 {
             width: 100%;
@@ -189,14 +177,12 @@ body {
             object-position: center;
             // height: 100vh;
         }
-
         .img2 {
             position: absolute;
             // z-index: 1;
             top: 40px;
             max-width: 257px;
         }
-
         .img3 {
             position: absolute;
             z-index: 1;
@@ -216,11 +202,9 @@ body {
 .photo1 {
     width: 42%;
     margin-left: 25px;
-
     @media(max-width: $tablet-1024) {
         width: 50%;
     }
-
     @media(max-width: $mobile-bp) {
         width: auto;
         margin-left: 0px;
@@ -231,7 +215,6 @@ body {
     margin-left: 25px;
     margin-top: 80px;
     width: 23%;
-
     @media(max-width: $mobile-bp) {
         width: auto;
         margin: 0;
@@ -243,7 +226,6 @@ body {
 .photo3 {
     margin-top: 80px;
     width: 20%;
-
     @media(max-width: $mobile-bp) {
         width: auto;
         margin: 0;
@@ -267,7 +249,6 @@ body {
     position: relative;
     margin-top: -3px;
     z-index: 25;
-
     @media(max-width: $tablet-bp-max) {
         flex-direction: column;
         display: grid;
@@ -276,37 +257,29 @@ body {
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
-
     .four-1 {
         left: 1px;
-
         @media(max-width: $tablet-bp-max) {
             // margin-left: 1px;
             grid-area: 1 / 1 / 2 / 2;
         }
     }
-
     .four-2 {
-
         // left: 1px;
         @media(max-width: $tablet-bp-max) {
             margin-left: -1px;
             grid-area: 1 / 2 / 2 / 3;
         }
     }
-
     .four-3 {
-
         // left: 1px;
         @media(max-width: $tablet-bp-max) {
             margin-left: 1px;
             grid-area: 2 / 1 / 3 / 2;
         }
     }
-
     .four-4 {
         right: 1px;
-
         @media(max-width: $tablet-bp-max) {
             grid-area: 2 / 2 / 3 / 3;
         }
@@ -318,7 +291,6 @@ body {
     width: 100%;
     object-fit: cover;
     object-position: center;
-
     @media(max-width: $tablet-bp-max) {
         display: flex;
         flex-direction: row;
@@ -327,7 +299,6 @@ body {
 
 .line_four-text_block {
     display: flex;
-
     @media(max-width: $tablet-bp-max) {
         display: none;
     }
@@ -335,7 +306,6 @@ body {
 
 .line_four-text_block-tab {
     display: none;
-
     @media(max-width: $tablet-bp-max) {
         display: flex;
     }
@@ -348,12 +318,10 @@ body {
     right: 0;
     z-index: 1;
     width: 100%;
-
     @media(max-width: $tablet-bp-max) {
         bottom: 50%;
         margin-bottom: -2px;
     }
-
     @media(max-width: $mobile-bp) {
         bottom: 50%;
         margin-bottom: -1px;
@@ -366,11 +334,9 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 1px solid $black;
-
     @media(max-width: $tablet-bp-max) {
         height: 180px;
     }
-
     @media(max-width: $mobile-bp) {
         height: 180px;
     }
@@ -383,11 +349,9 @@ body {
     font-size: 35px;
     text-transform: uppercase;
     margin: 0 auto;
-
     @media(max-width: $tablet-bp-max) {
         font-size: 20px;
     }
-
     @media(max-width: $mobile-bp) {
         // width: 100%;
         font-size: 18px;
@@ -396,7 +360,6 @@ body {
 
 .text-betweenlines-desck {
     margin: -2px 0px 0px -3px;
-
     @media(max-width: $mobile-bp) {
         display: none;
     }
@@ -404,7 +367,6 @@ body {
 
 .text-betweenlines-mob {
     display: none;
-
     @media(max-width: $mobile-bp) {
         display: block;
     }
@@ -412,14 +374,11 @@ body {
 
 .last {
     margin-top: -4px;
-
     @media(max-width: $mobile-bp) {
         position: relative;
     }
-
     .text-on-the-photo_mob {
         display: none;
-
         @media(max-width: $mobile-bp) {
             display: block;
             position: absolute;

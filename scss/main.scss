@@ -1,67 +1,67 @@
-@font-face {
-    font-family: 'Arial Narrow';
-    src: url('../fonts/arialnarrow.ttf');
-    font-weight: 400;
-    font-style: normal;
-}
+  @font-face {
+      font-family: 'Arial Narrow';
+      src: url('../fonts/arialnarrow.ttf');
+      font-weight: 400;
+      font-style: normal;
+  }
 
-@font-face {
-    font-family: 'TT Norms Pro';
-    src: url('../fonts/TTNormsPro-Regular.ttf');
-    font-weight: 400;
-    font-style: normal;
-}
+  @font-face {
+      font-family: 'TT Norms Pro';
+      src: url('../fonts/TTNormsPro-Regular.ttf');
+      font-weight: 400;
+      font-style: normal;
+  }
 
-@font-face {
-    font-family: 'MS Mincho';
-    src: url('../fonts/MSMINCHO.TTF');
-    font-weight: 400;
-    font-style: normal;
-}
+  @font-face {
+      font-family: 'MS Mincho';
+      src: url('../fonts/MSMINCHO.TTF');
+      font-weight: 400;
+      font-style: normal;
+  }
 
-@font-face {
-    font-family: 'Druk Cyr';
-    src: url('../fonts/DrukCyr-Heavy.ttf');
-    font-weight: 900;
-    font-style: normal;
-}
+  @font-face {
+      font-family: 'Druk Cyr';
+      src: url('../fonts/DrukCyr-Heavy.ttf');
+      font-weight: 900;
+      font-style: normal;
+  }
 
-$whiteSmoky: #F8F6F2;
-$black: #151515;
-$white: #FFFFFF;
-$smoky: #CDCDCD;
-// ===== bp ======
-$tablet-bp-max: 980px;
-$tablet-1024: 1024px;
-$desk-bp-min: 1520px;
-$desk-bp-max: 1700px;
-$mobile-bp-max: 768px;
-$mobile-bp: 480px;
-$min-bp: 390px;
+  $whiteSmoky: #F8F6F2;
+  $black: #151515;
+  $white: #FFFFFF;
+  $smoky: #CDCDCD;
+  // ===== bp ======
+  $tablet-bp-max: 980px;
+  $tablet-1024: 1024px;
+  $desk-bp-min: 1520px;
+  $desk-bp-max: 1700px;
+  $mobile-bp-max: 768px;
+  $mobile-bp: 480px;
+  $min-bp: 390px;
 
-a {
-    text-decoration: none;
-}
+  a {
+      text-decoration: none;
+  }
 
-body {
-    overflow-x: hidden;
-    -webkit-text-size-adjust: none;
-}
+  body {
+      overflow-x: hidden;
+      -webkit-text-size-adjust: none;
+  }
 
-input[type=text],
-input[type=submit],
-textarea {
-    -webkit-appearance: none;
-}
+  input[type=text],
+  input[type=submit],
+  textarea {
+      -webkit-appearance: none;
+  }
 
-@import 'header.scss';
-@import 'about-page.scss';
-@import 'models.scss';
-@import 'model-page.scss';
-@import 'kyiv.scss';
-@import 'form.scss';
-@import 'shop.scss';
-@import 'shop-page.scss';
-@import 'bag.scss';
-@import 'contact.scss';
-@import 'footer.scss';
+  @import 'header.scss';
+  @import 'about-page.scss';
+  @import 'models.scss';
+  @import 'model-page.scss';
+  @import 'kyiv.scss';
+  @import 'form.scss';
+  @import 'shop.scss';
+  @import 'shop-page.scss';
+  @import 'bag.scss';
+  @import 'contact.scss';
+  @import 'footer.scss';

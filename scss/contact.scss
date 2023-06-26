@@ -10,21 +10,18 @@
     flex-direction: row;
     border-top: 1px solid $black;
     border-bottom: 1px solid $black;
-
     @media(max-width: $tablet-1024) {
         // border-top: none;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
-
     @media(max-width: $tablet-bp-max) {
         // border-top: none;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
-
     @media(max-width: $mobile-bp) {
         display: flex;
         flex-direction: column;
@@ -39,7 +36,6 @@
     width: 100%;
     // justify-content: center;
     align-items: center;
-
     @media(max-width: $tablet-bp-max) {
         // border-top: 1px solid $black;
     }
@@ -47,7 +43,6 @@
 
 .contact-block:hover {
     color: $white;
-
     .contact-mail {
         color: $white;
     }
@@ -77,11 +72,9 @@
     background-color: #FFF0ED;
     border-right: 1px solid #000000;
     transition: all 0.5s ease;
-
     @media(max-width: $tablet-1024) {
         left: 1px;
     }
-
     @media(max-width: $mobile-bp) {
         border-top: 1px solid #000000;
     }
@@ -98,7 +91,6 @@
     background-color: #EFFDFF;
     border-right: 1px solid #000000;
     transition: all 0.5s ease;
-
     @media(max-width: $tablet-1024) {
         border-top: 1px solid #000000;
     }
@@ -114,7 +106,6 @@
 .block4 {
     background-color: #ECF0FF;
     transition: all 0.5s ease;
-
     @media(max-width: $tablet-1024) {
         left: 1px;
         border-top: 1px solid #000000;
@@ -129,6 +120,7 @@
 }
 
 .contact-name {
+    margin: 0 auto;
     font-family: 'MS Mincho';
     font-size: 25px;
     text-transform: uppercase;
